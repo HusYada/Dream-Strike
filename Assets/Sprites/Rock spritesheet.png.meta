@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 31ef5bac6cf3daa4f8de4eb7005c643e
+timeCreated: 1521393374
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rock spritesheet_0
+    21300002: Rock spritesheet_1
+    21300004: Rock spritesheet_2
+    21300006: Rock spritesheet_3
+    21300008: Rock spritesheet_4
+    21300010: Rock spritesheet_5
+    21300012: Rock spritesheet_6
+    21300014: Rock spritesheet_7
+    21300016: Rock spritesheet_8
+    21300018: Rock spritesheet_9
+    21300020: Rock spritesheet_10
+    21300022: Rock spritesheet_11
+    21300024: Rock spritesheet_12
+    21300026: Rock spritesheet_13
+    21300028: Rock spritesheet_14
+    21300030: Rock spritesheet_15
+    21300032: Rock spritesheet_16
+    21300034: Rock spritesheet_17
+    21300036: Rock spritesheet_18
+    21300038: Rock spritesheet_19
+    21300040: Rock spritesheet_20
+    21300042: Rock spritesheet_21
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rock spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2090
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 2090
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1881
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1881
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1672
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1672
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1463
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1463
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1254
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1254
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1045
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1045
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 836
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 627
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 418
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 209
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rock spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 222
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

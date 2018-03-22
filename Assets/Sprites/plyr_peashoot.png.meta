@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 036e64236aeddac4e8cbb04d1b909da3
+timeCreated: 1520702095
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: plyr_peashoot_0
+    21300002: plyr_peashoot_1
+    21300004: plyr_peashoot_2
+    21300006: plyr_peashoot_3
+    21300008: plyr_peashoot_4
+    21300010: plyr_peashoot_5
+    21300012: plyr_peashoot_6
+    21300014: plyr_peashoot_7
+    21300016: plyr_peashoot_8
+    21300018: plyr_peashoot_9
+    21300020: plyr_peashoot_10
+    21300022: plyr_peashoot_11
+    21300024: plyr_peashoot_12
+    21300026: plyr_peashoot_13
+    21300028: plyr_peashoot_14
+    21300030: plyr_peashoot_15
+    21300032: plyr_peashoot_16
+    21300034: plyr_peashoot_17
+    21300036: plyr_peashoot_18
+    21300038: plyr_peashoot_19
+    21300040: plyr_peashoot_20
+    21300042: plyr_peashoot_21
+    21300044: plyr_peashoot_22
+    21300046: plyr_peashoot_23
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: plyr_peashoot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1376
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_1
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1376
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_2
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1376
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_3
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1376
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_4
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1376
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1032
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_6
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1032
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_7
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1032
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_8
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1032
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_9
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 1032
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_11
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 688
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_12
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 688
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_13
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 688
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_14
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 688
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 344
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_16
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 344
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_17
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 344
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_18
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 341
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_19
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 344
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_21
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_22
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: plyr_peashoot_23
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 0
+        width: 452
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
