@@ -162,14 +162,14 @@ public class abtscreen : MonoBehaviour {
 
 		if(hasattack == true && abtscreen_indexx == 3 && abtscreen_indexy == 0) {
 
-			if((Input.GetKeyDown("z") || xboxp1_a == true) && eqpdattack == false && abtscreen_iscooldown == false && plyr.apcurrent + 3 <= plyr.apmax) {
-				plyr.apcurrent += 3;
+			if((Input.GetKeyDown("z") || xboxp1_a == true) && eqpdattack == false && abtscreen_iscooldown == false && plyr.apcurrent + 2 <= plyr.apmax) {
+				plyr.apcurrent += 2;
 				eqpdattack = true;
 				abtscreen_iscooldown = true;
 			}
 
 			if((Input.GetKeyDown("z") || xboxp1_a == true) && eqpdattack == true && abtscreen_iscooldown == false) {
-				plyr.apcurrent -= 3;
+				plyr.apcurrent -= 2;
 				eqpdattack = false;
 				abtscreen_iscooldown = true;
 			}
@@ -237,14 +237,14 @@ public class abtscreen : MonoBehaviour {
 
 		if(hascyberslam == true && abtscreen_indexx == 0 && abtscreen_indexy == 2) {
 
-			if((Input.GetKeyDown("z") || xboxp1_a == true) && eqpdcyberslam == false && abtscreen_iscooldown == false && plyr.apcurrent + 1 <= plyr.apmax) {
-				plyr.apcurrent += 1;
+			if((Input.GetKeyDown("z") || xboxp1_a == true) && eqpdcyberslam == false && abtscreen_iscooldown == false && plyr.apcurrent + 2 <= plyr.apmax) {
+				plyr.apcurrent += 2;
 				eqpdcyberslam = true;
 				abtscreen_iscooldown = true;
 			}
 
 			if((Input.GetKeyDown("z") || xboxp1_a == true) && eqpdcyberslam == true && abtscreen_iscooldown == false) {
-				plyr.apcurrent -= 1;
+				plyr.apcurrent -= 2;
 				eqpdcyberslam = false;
 				abtscreen_iscooldown = true;
 			}
@@ -435,7 +435,7 @@ public class abtscreen : MonoBehaviour {
         		if(abtscreen_indexx == 0 && abtscreen_indexy == 2) {
         			GUI.Label(new Rect(Screen.width/6.3f, Screen.height/1.2f, Screen.width/2f, Screen.height/8f), "Press the X button to do a forward dash attack", abtscreen_font);
 					GUI.Label(new Rect(Screen.width/6.3f, Screen.height/1.15f, Screen.width/2f, Screen.height/8f), "Can be used in mid-air and traverse gaps", abtscreen_font);
-					GUI.Label(new Rect(Screen.width/1.65f, Screen.height/1.15f, Screen.width/2f, Screen.height/8f), "1", abtscreen_font);
+					GUI.Label(new Rect(Screen.width/1.65f, Screen.height/1.15f, Screen.width/2f, Screen.height/8f), "2", abtscreen_font);
 				}
 			}   
 

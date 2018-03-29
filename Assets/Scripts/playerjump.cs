@@ -8,6 +8,7 @@ public class playerjump : MonoBehaviour {
 
 	// Public Script Variables	
 	public player plyr;								// A script variable to access variables from the player script
+	public playerblock block;
 	public menu menuu;								// A script variable to access variables from the menu script
 	public abtscreen abt;							// A script variable to access variables from the abtscreen script
 	// End of Public Script Variables	
@@ -56,7 +57,9 @@ public class playerjump : MonoBehaviour {
 		// If the player is jumping, the player will be forced upwards
 		if (jumping == true) {
 			rb.AddForce(Vector2.up * (jump - 60));
-			anim.SetBool("Jumping", true);
+			if(block.mayoshooting == false && plyr.grounded == false) {
+				anim.SetBool("Jumping", true);
+			}
 			candoublejump = false;
 			plyr.grounded = false;
 			plyr.idle = false;

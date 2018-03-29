@@ -21,7 +21,7 @@ public class player : MonoBehaviour {
 	// Public Variables	
 	public int currenthp = 6;							// The current HP for the player
 	public int hpmax = 6;								// The maximum amount of HP the player has
-	public float apcurrent = 19;						// The current AP for the player
+	public float apcurrent = 18;						// The current AP for the player
 	public float apmax = 20;							// The maximum amount of AP the player has
 	public float gold = 0;								// The current amount of gold the player has
 	public int invincible_cooldowntime; 				// The cooldown on the player's invincibility when hurt
@@ -108,7 +108,7 @@ public class player : MonoBehaviour {
            	//sr.color = new Color(255f, 255f, 255f, 100f);
         }
 
-        if(invincible_cooldowncounter < invincible_cooldowntime / 2 && invincible == true) {
+        if(invincible_cooldowncounter < invincible_cooldowntime / 4 && invincible == true) {
         	//anim.Play("plyr_hurt");
         	anim.SetBool("Hurt", true);
         	//grounded = false;
@@ -116,7 +116,7 @@ public class player : MonoBehaviour {
 			//falling = false;
         }
 
-        if(invincible_cooldowncounter >= invincible_cooldowntime / 2 && invincible == true) {
+        if(invincible_cooldowncounter >= invincible_cooldowntime / 4 && invincible == true) {
         	anim.SetBool("Hurt", false);
         	//move.canwalkleft = true;
 			//move.canwalkright = true;
@@ -138,6 +138,11 @@ public class player : MonoBehaviour {
 		/*if(GetComponent<Rigidbody2D>().velocity.magnitude > 12.0f && falling == false) {
 			GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * 1.0f;
 		}*/
+        //Vector3 fwd = transform.TransformDirection(Vector3.forward);
+
+        /*if (Physics.Raycast(transform.position, leftvector, 10)) {
+            print("There is something in front of the object!");
+        }*/
 	}
 
 	void OnGUI(){
@@ -264,9 +269,9 @@ public class player : MonoBehaviour {
 			transform.parent = col.transform;
         }
 
-        if(col.gameObject.tag == "Mayo") {
+        /*if(col.gameObject.tag == "Mayo") {
 			//block.mayoair = true;
-		}
+		}*/
 
 		if(col.gameObject.tag == "Lwl") {
 			move.canwalkleft = false;
@@ -306,9 +311,9 @@ public class player : MonoBehaviour {
 			transform.parent = col.transform;
         }
 
-        if(col.gameObject.tag == "Mayo") {
+        /*if(col.gameObject.tag == "Mayo") {
 			//block.mayoair = true;
-		}
+		}*/
 
 		if(col.gameObject.tag == "Lwl") {
 			move.canwalkleft = false;

@@ -8,6 +8,7 @@ public class playerblock : MonoBehaviour {
 
 	
 	public player plyr;						// A script variable to access variables from the player script
+	public playerjump jump;
 	public playermovement move;
 	public abtscreen abt;					// A script variable to access variables from the abtscreen script
 	public GameObject blockblock;			// The block to use, edit it in the Inspector
@@ -17,7 +18,7 @@ public class playerblock : MonoBehaviour {
 	private bool cockblock = false;
 	private float mayodirection = 2.4f;
 	public int mayoshootcurrentframe = 0;	// The number of the frames that's passed for the shoot animation
-	private int mayoshoottime = 40;		// The time it takes to finish the mayo
+	public int mayoshoottime = 33;		// The time it takes to finish the mayo
 	private int mayocooldowno = 200;	// The time it takes to get another mayo
 	private Rigidbody2D rb;					// The
 	private Animator anim;					// The animator for the player
@@ -118,6 +119,7 @@ public class playerblock : MonoBehaviour {
 		// If up/control stick is held up and x/B button is pressed and the player is facing either left or right and the player isn't already shooting and the "Mayonasie" ability is equipped, then the player will create a block on either side
 		if(plyr.locked == false && (Input.GetKey("down") || vmove <= -1.0f) && (Input.GetKey("z") || xboxp1_a == true) && (this.transform.eulerAngles == plyr.rightvector || this.transform.eulerAngles == plyr.leftvector) && mayoshooting == false && abt.eqpdmayonaise == true) {
 			mayoshooting = true;
+			jump.jumping = false;
 			if(plyr.grounded == true) {
  				//mayoair = false;
  				anim.SetBool("Jumping", false);
@@ -133,13 +135,25 @@ public class playerblock : MonoBehaviour {
 		if(mayoshooting == true){
 			mayoshootcurrentframe++;
 			//rb.constraints = RigidbodyConstraints2D.FreezePositionX;
- 			rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+ 			/*rb.constraints = RigidbodyConstraints2D.FreezePositionY;
  			move.canwalkleft = false;
-			move.canwalkright = false;
+			move.canwalkright = false;*/
 			anim.SetBool("Mayo", true);
 			//anim.SetBool("Attacking", false);
 
 			//anim.SetBool("Falling", true);
+		}
+
+		if(mayoshooting == true && mayoshootcurrentframe < mayoshoottime) {
+			rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+ 			move.canwalkleft = false;
+			move.canwalkright = false;
+		}
+
+		if(mayoshooting == true && mayoshootcurrentframe == mayoshoottime) {
+			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+			move.canwalkleft = true;
+			move.canwalkright = true;
 		}
 
 		// When the counter for the slam is greater than the slam time, the slam will finish and slamcurrentframe is reset
@@ -150,9 +164,9 @@ public class playerblock : MonoBehaviour {
 				makeblock = true;
 			}
 			//rb.constraints = ~RigidbodyConstraints2D.FreezePositionX;
-			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
-			move.canwalkleft = true;
-			move.canwalkright = true;
+			//rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+			//move.canwalkleft = true;
+			//move.canwalkright = true;
 			anim.SetBool("Mayo", false);
 			if(plyr.grounded == true){
 				anim.SetFloat("Horizontal", 0);

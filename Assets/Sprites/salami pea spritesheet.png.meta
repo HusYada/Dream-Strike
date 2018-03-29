@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7f3e4fcf8e4d9194980932c99c2eb231
-timeCreated: 1521154623
+timeCreated: 1522160980
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,12 +90,12 @@ TextureImporter:
       name: salami pea spritesheet_0
       rect:
         serializedVersion: 2
-        x: 145
+        x: 0
         y: 391
-        width: 215
-        height: 277
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -104,12 +104,12 @@ TextureImporter:
       name: salami pea spritesheet_1
       rect:
         serializedVersion: 2
-        x: 409
+        x: 391
         y: 391
-        width: 332
-        height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -120,10 +120,10 @@ TextureImporter:
         serializedVersion: 2
         x: 782
         y: 391
-        width: 328
-        height: 327
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,10 +134,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1173
         y: 391
-        width: 328
-        height: 327
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,12 +146,12 @@ TextureImporter:
       name: salami pea spritesheet_4
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 398
-        width: 283
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1564
+        y: 391
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: salami pea spritesheet_5
       rect:
         serializedVersion: 2
-        x: 66
-        y: 7
-        width: 283
-        height: 336
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: salami pea spritesheet_6
       rect:
         serializedVersion: 2
-        x: 457
-        y: 7
-        width: 294
-        height: 333
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 391
+        y: 0
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: salami pea spritesheet_7
       rect:
         serializedVersion: 2
-        x: 846
-        y: 7
-        width: 294
-        height: 333
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 782
+        y: 0
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: salami pea spritesheet_8
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 4
-        width: 218
-        height: 355
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1173
+        y: 0
+        width: 391
+        height: 391
+      alignment: 9
+      pivot: {x: 0.5, y: 0.535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -13,14 +13,14 @@ public class leftright : MonoBehaviour {
 	// The width the object will travel before turning around, edit it in the Inspector
  	public float width;
 
- 	//private Rigidbody2D rb;
+ 	private Rigidbody2D rb;
 
 	void Start () {
 		// Setting the starting x position to it's current x position
     	startposx = transform.position.x;
 
     	// Getting the components
-		//rb   = this.GetComponent<Rigidbody2D>();
+		rb   = this.GetComponent<Rigidbody2D>();
 	}
 
 	void Update () {

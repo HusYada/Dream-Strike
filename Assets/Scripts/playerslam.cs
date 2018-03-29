@@ -12,7 +12,7 @@ public class playerslam : MonoBehaviour {
 	public bool slamming = false;		// Checks if the player is slamming
 	private float slamspeed = 19.5f;	// Slam speed
 	private int slamcurrentframe = 0;	// The number of the frames that's passed for the slam animation
-	private int slamtime = 40;			// The time it takes to finish the slam
+	private int slamtime = 42;			// The time it takes to finish the slam
 	private Rigidbody2D rb;				// The rigidbody for the player
 	private Animator anim;				// The animator for the player
 
