@@ -19,8 +19,8 @@ public class player : MonoBehaviour {
 	// End of Public Script Variables
 
 	// Public Variables	
-	public int currenthp = 6;							// The current HP for the player
-	public int hpmax = 6;								// The maximum amount of HP the player has
+	public int currenthp = 5;							// The current HP for the player
+	public int hpmax = 5;								// The maximum amount of HP the player has
 	public float apcurrent = 18;						// The current AP for the player
 	public float apmax = 20;							// The maximum amount of AP the player has
 	public float gold = 0;								// The current amount of gold the player has
@@ -35,10 +35,27 @@ public class player : MonoBehaviour {
 	public bool bigjump = false;						// Checks if the player has the "Big Jump" ability
 	public Vector3 leftvector = new Vector3(0, 180); 	// A vector that looks left
    	public Vector3 rightvector = new Vector3(0, 0); 	// A vector that looks right
+
+   	//Which Checkpoint?
+   	public bool check00 = false;
+	public bool check01 = false;
+	public bool check02 = false;
+	public bool check03 = false;
+	public bool check04 = false;
+	public bool check05 = false;
+	public bool check06 = false;
+	public bool check07 = false;
+	public bool check08 = false;
+	public bool check09 = false;
+
 	// End of Public Variables
 
 	// Private Variables
-	private SpriteRenderer sr;
+	private float red = 1f;
+	private float gre = 1f;
+	private float blu = 1f;
+	private float alp = 1f;
+	private SpriteRenderer sr;							// The sprite renderer for the player
 	private Rigidbody2D rb;								// The rigidbody for the player
 	private BoxCollider2D bx;							// The box collider for the player
 	private Animator anim;								// The animator for the player
@@ -62,9 +79,9 @@ public class player : MonoBehaviour {
 		Vector2 velocitystop = rb.velocity;
 
 		// The colour of the player
-		Color colour = sr.color;
-		sr.color = colour;
+		sr.color = new Color(red,gre,blu,alp);
 
+		// If the game can't be paused or is paused via the menu, the player is locked from doing anything
 		if(menuu.canpause == false || menuu.paused == true) {
 			locked = true;
 		} else if (menuu.canpause == true) {
@@ -104,10 +121,10 @@ public class player : MonoBehaviour {
 			//move.canwalkright = false;
 			locked = true;
            	invincible_cooldowncounter++;
-           	colour.a = 0.5f;
-           	//sr.color = new Color(255f, 255f, 255f, 100f);
+           	alp = Mathf.PingPong(Time.time * 32, 0.75f);
         }
 
+        // Hurt animation will play if the invincibility counter is below 1/4 of the total invincibilty cooldown time
         if(invincible_cooldowncounter < invincible_cooldowntime / 4 && invincible == true) {
         	//anim.Play("plyr_hurt");
         	anim.SetBool("Hurt", true);
@@ -116,6 +133,7 @@ public class player : MonoBehaviour {
 			//falling = false;
         }
 
+         // Hurt animation will stop if the invincibility counter goes over 1/4 of the total invincibilty cooldown time
         if(invincible_cooldowncounter >= invincible_cooldowntime / 4 && invincible == true) {
         	anim.SetBool("Hurt", false);
         	//move.canwalkleft = true;
@@ -123,21 +141,24 @@ public class player : MonoBehaviour {
 			locked = false;
         }
 
+        // Stop flickering when invincibility is almost false
+        if(invincible_cooldowncounter > invincible_cooldowntime - 2) {
+        	alp = 1f;
+        }
+
         // If the invincible counter reaches the cooldown time, the enemy is no longer invincible and the counter is reset
         if (invincible_cooldowncounter > invincible_cooldowntime) {
         	anim.SetBool("Hurt", false);
            	invincible = false;
            	invincible_cooldowncounter = 0;
-           	colour.a = 1.0f;
-           	//sr.color = new Color(255f, 255f, 255f, 255f);
         }
 	}
 
 	// Limit for the player so it doesn't break the sound barrier
 	void FixedUpdate() {
-		/*if(GetComponent<Rigidbody2D>().velocity.magnitude > 12.0f && falling == false) {
-			GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * 1.0f;
-		}*/
+		if(GetComponent<Rigidbody2D>().velocity.magnitude > 10.0f) {// && falling == false) {
+			GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * 10.0f;
+		}
         //Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         /*if (Physics.Raycast(transform.position, leftvector, 10)) {
