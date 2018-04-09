@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rock : MonoBehaviour {
-
+//public class rock : MonoBehaviour {
+/*
 	// The target the enemy is going to shoot at, edit it in the Inspector
 	public Transform player;
 
@@ -76,19 +76,19 @@ public class rock : MonoBehaviour {
         		}
 
         		//Debug.Log(transform.position.y);
-        		/*velocitystop.x = 0.0f;
-				rb.velocity = velocitystop;
-				waitjump = true;*/
+        		//velocitystop.x = 0.0f;
+				//rb.velocity = velocitystop;
+				//waitjump = true;
         		
             }
 
-            /*if ((jump > 0 && transform.position.y >= startposy + height) || (jump <= 0 && transform.position.y <= startposy)) {
+            //if ((jump > 0 && transform.position.y >= startposy + height) || (jump <= 0 && transform.position.y <= startposy)) {
 
-        		jump *= -1;
-            }*/
+        	//	jump *= -1;
+            //}
 
             //if(transform.position.x <= startposx + width || transform.position.x >= startposx) {
-            	transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * speed * Time.deltaTime);
+            	//transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * speed * Time.deltaTime);
         	//}
 
             if(waitjump == true) {
@@ -121,7 +121,7 @@ public class rock : MonoBehaviour {
         	} else if(player.position.x >= this.transform.position.x) {
         		speed = 8;
         	}
-        }*/
+        }
 
         // If the menu screen has changed, a counter will start
 		if (rock_iscooldown == true) {
@@ -133,7 +133,7 @@ public class rock : MonoBehaviour {
             rock_iscooldown = false;
            	rock_cooldowncounter = 0;
         }
-    }
+    }*/
 
     //void OnCollisionEnter2D(Collision2D col) {
     	//if(col.gameObject.tag == "Gnd" && range == true) {
@@ -148,4 +148,90 @@ public class rock : MonoBehaviour {
     		waitjump = false;
     	}*/
     //}
+//}
+
+public class rock : MonoBehaviour {
+
+    public float RotateSpeed;
+    public float Radius;
+    private bool go = false;
+    public bool preparing = true;
+    public bool jumping = false;
+    public bool landing = false;
+    private int counter = 0;
+    public int prepend;
+    //public int jumpend;
+    public int landend;
+    private float _angle = 4.8001f;
+    private float start = 4.8f;
+    private float end = 7.8f;
+    private Vector2 _centre;
+    private Vector2 startt;
+    private Animator anim;
+    private SpriteRenderer sr;
+ 
+    public void Start() {
+        _centre = transform.position;
+        startt = transform.position;
+        anim = this.GetComponent<Animator>();
+        sr = this.GetComponent<SpriteRenderer>();
+    }
+ 
+    public void FixedUpdate() {
+
+        if(Input.GetKeyDown("h")) {
+            go = true;
+        }
+
+        if(Input.GetKeyDown("j")) {
+            go = false;
+            transform.position = startt;
+            counter = 0;
+            anim.SetBool("Bounce", false);
+        }
+
+        if(go == true) {
+
+            anim.SetBool("Bounce", true);
+            counter++;
+
+            if(counter >= prepend && preparing == true) {
+                jumping = true;
+                preparing = false;
+                landing = false;
+            }
+
+            if(counter >= landend && landing == true) {
+                jumping = false;
+                preparing = true;
+                landing = false;
+                counter = 0;
+                sr.flipX = !sr.flipX;
+            }
+
+            if(preparing == true) {
+            }
+
+            if(jumping == true) {
+
+                preparing = false;
+                
+                if(_angle >= end || _angle <= start) {
+                    if((_angle >= end || _angle <= start) && counter > 50) {
+                        landing = true;
+                    }
+                    RotateSpeed *= -1;
+                }
+
+                _angle += RotateSpeed * Time.deltaTime;
+
+                var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
+                transform.position = _centre + offset;
+            }
+
+            if(landing == true) {
+                jumping = false;
+            }
+        }
+    }
 }

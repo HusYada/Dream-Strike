@@ -19,12 +19,18 @@
     public bool dontgothere;
 
     private Rigidbody2D rb;                             // The rigidbody for the player
+    private float red = 1f;
+    private float gre = 1f;
+    private float blu = 1f;
+    private float alp = 1f;
+    private SpriteRenderer sr;                          // The sprite renderer for the player
 
 	// Sets the invinsibility and death counters to 0
 	void Start () {
 
         // Getting the components
         rb   = this.GetComponent<Rigidbody2D>();
+        sr   = this.GetComponent<SpriteRenderer>();
 
        	invincible = false;
        	invincible_cooldowncounter = 0;
@@ -35,6 +41,9 @@
 
         Vector2 velocitystop = rb.velocity * -1f;
 
+        // The colour of the player
+        sr.color = new Color(red,gre,blu,alp);
+
         if(dontgothere == true) {
             velocitystop.x = 0.0f;
             rb.velocity = velocitystop;
@@ -43,12 +52,14 @@
 		// If the enemy is invicible, an invincible counter will start
 		if (invincible == true) {
            	invincible_cooldowncounter++;
+            alp = Mathf.PingPong(Time.time * 32, 0.75f);
        	}
 
        	// If the invincible counter reaches the cooldown time, the enemy is no longer invincible and the counter is reset
        	if (invincible_cooldowncounter >= invincible_cooldowntime) {
            	invincible = false;
            	invincible_cooldowncounter = 0;
+            alp = 1.0f;
        	}
 
        	// If the enemy's health is equal or less than 0, the enemy is dead
