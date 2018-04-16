@@ -11,6 +11,11 @@ public class playermovement : MonoBehaviour {
 	public playerslam slm;				// A script variable to access variables from the playerslam script
 	public bool canwalkleft = true;		// Checks if the player can walk left
 	public bool canwalkright = true;	// Checks if the player can walk right
+	private bool start_move_cooldownleft = false;
+	private bool start_move_cooldownright = false;
+	private int move_cooldowntime = 2; 							// The cooldown on the player's invincibility when hurt
+    private int moveleft_cooldowncounter = 0; 				// The counter for the invincibility cooldown
+    private int moveright_cooldowncounter = 0;
 	//private Rigidbody2D rb;
 	private Animator anim;				// The animator for the player
 
@@ -73,6 +78,26 @@ public class playermovement : MonoBehaviour {
 			plyr.idle = true;
 		}
 
+		if(start_move_cooldownleft == true) {
+			moveleft_cooldowncounter++;
+		}
+
+		if(start_move_cooldownright == true) {
+			moveright_cooldowncounter++;
+		}
+
+		if(moveleft_cooldowncounter > move_cooldowntime) {
+			canwalkleft = true;
+			start_move_cooldownleft = false;
+			moveleft_cooldowncounter = 0;
+		}
+
+		if(moveright_cooldowncounter > move_cooldowntime) {
+			canwalkright = true;
+			start_move_cooldownright = false;
+			moveright_cooldowncounter = 0;
+		}
+
 		//if(Input.GetKeyUp("left") || hmove == 0.0f || Input.GetKeyUp("right")){
 		/*if(hmove == 0.0f){
 			plyr.idle = true;
@@ -104,11 +129,15 @@ public class playermovement : MonoBehaviour {
 	// If the player stop colliding with something on the left of it, it can move left, vice versa for moving right
 	void OnCollisionExit2D(Collision2D col) {
 		if(col.gameObject.tag == "Lwl") {
-			canwalkleft = true;
+			//canwalkleft = true;
+			//move_cooldowntime++;
+			start_move_cooldownleft = true;
 		}
 
 		if(col.gameObject.tag == "Rwl") {
-			canwalkright = true;
+			//canwalkright = true;
+			//move_cooldowntime++;
+			start_move_cooldownright = true;
 		}
 	}
 }

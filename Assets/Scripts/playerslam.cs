@@ -11,7 +11,7 @@ public class playerslam : MonoBehaviour {
 	public bool canslam = true;		// Checks if the player can slam
 	public bool slamming = false;		// Checks if the player is slamming
 	private float slamspeed = 19.5f;	// Slam speed
-	private int slamcurrentframe = 0;	// The number of the frames that's passed for the slam animation
+	public int slamcurrentframe = 0;	// The number of the frames that's passed for the slam animation
 	private int slamtime = 42;			// The time it takes to finish the slam
 	private Rigidbody2D rb;				// The rigidbody for the player
 	private Animator anim;				// The animator for the player
@@ -84,6 +84,28 @@ public class playerslam : MonoBehaviour {
 			col.gameObject.GetComponent<enemy>().health -= 2;
 			col.gameObject.GetComponent<enemy>().invincible = true;
 		}
+
+		// If colliding into a wall while slamming, the slam will stop
+		if((col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl") && slamming == true) {
+			anim.SetBool("Slamming", false);
+			slamming = false;
+			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+			//transform.Translate (new Vector3 (0.0f, 0.0f, 0.0f) * Time.deltaTime);
+
+			if(slamcurrentframe <= slamtime / 2) {
+				slamcurrentframe = (slamtime / 2) + 1;
+			}
+		}
+
+		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
+
+		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {
@@ -92,6 +114,54 @@ public class playerslam : MonoBehaviour {
 		if(col.gameObject.tag == "Enm" && slamming == true && col.gameObject.GetComponent<enemy>().invincible == false) {
 			col.gameObject.GetComponent<enemy>().health -= 2;
 			col.gameObject.GetComponent<enemy>().invincible = true;
+		}
+
+		// If colliding into a wall while slamming, the slam will stop
+		if((col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl") && slamming == true) {
+			anim.SetBool("Slamming", false);
+			slamming = false;
+			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+			//transform.Translate (new Vector3 (0.0f, 0.0f, 0.0f) * Time.deltaTime);
+
+			if(slamcurrentframe <= slamtime / 2) {
+				slamcurrentframe = (slamtime / 2) + 1;
+			}
+		}
+
+		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
+
+		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
+	}
+
+	void OnCollisionStay2D (Collision2D col) {
+
+		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
+
+		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
+	}
+
+	void OnTriggerStay2D (Collider2D col) {
+
+		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
+		}
+
+		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
+			canslam = false;
+			slamcurrentframe = (slamtime / 2) + 1;
 		}
 	}
 }

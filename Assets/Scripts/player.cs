@@ -156,8 +156,8 @@ public class player : MonoBehaviour {
 
 	// Limit for the player so it doesn't break the sound barrier
 	void FixedUpdate() {
-		if(GetComponent<Rigidbody2D>().velocity.magnitude > 10.0f) {// && falling == false) {
-			GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * 10.0f;
+		if(GetComponent<Rigidbody2D>().velocity.magnitude > 6.0f && jump.jumping == true) {
+			GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * 6.0f;
 		}
         //Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
@@ -187,7 +187,7 @@ public class player : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col) {
 		
 	// Checks if player is on the ground, if so then the player is grounded, can jump again, cannot double jump and animations are changed
-		if(col.gameObject.tag == "Gnd" && falling == false) {
+		/*if(col.gameObject.tag == "Gnd" && falling == false) {
 			grounded = true;
 			jump.candoublejump = false;
 			jump.jumpcurrentframe = 0;
@@ -199,12 +199,20 @@ public class player : MonoBehaviour {
 			anim.SetBool("Double Jumping", false);
 			anim.SetBool("Falling", false);
 			anim.SetBool("Hurt", false);
-		}
+		}*/
 
-		if(col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl" && falling == true) {
+		if((col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl") && falling == true) {
 			grounded = false;
 			slam.slamming = false;
 			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+		}
+
+		if(col.gameObject.tag == "Lwl") {
+			move.canwalkleft = false;
+		}
+
+		if(col.gameObject.tag == "Rwl") {
+			move.canwalkright = false;
 		}
 
 		if(col.gameObject.tag == "Enm" && invincible == false && slam.slamming == false) {
@@ -222,16 +230,24 @@ public class player : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D col) {
 		// If the player is on the ground, then they are still grounded
-		if(col.gameObject.tag == "Gnd") {
+		/*if(col.gameObject.tag == "Gnd") {
 			grounded = true;
 			block.mayoair = false;
 			//falling = false;
 			anim.SetBool("Falling", false);
+		}*/
+
+		if((col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl") && falling == true) {
+			grounded = false;
 		}
 
-		/*if(col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl" && falling == true) {
-			grounded = false;
-		}*/
+		if(col.gameObject.tag == "Lwl") {
+			move.canwalkleft = false;
+		}
+
+		if(col.gameObject.tag == "Rwl") {
+			move.canwalkright = false;
+		}
 
 		if(col.gameObject.tag == "Enm" && invincible == false && slam.slamming == false) {
 			grounded = true;
@@ -255,10 +271,18 @@ public class player : MonoBehaviour {
 	void OnCollisionExit2D(Collision2D col) {
 
 		// If the player is no longer colliding with the ground, then the player is not grounded
-		if(col.gameObject.tag == "Gnd") {
+		/*if(col.gameObject.tag == "Gnd") {
 			grounded = false;
 			jump.candoublejump = false;
 			anim.SetBool("Falling", true);
+		}*/
+
+		if(col.gameObject.tag == "Lwl") {
+			//move.canwalkleft = true;
+		}
+
+		if(col.gameObject.tag == "Rwl") {
+			//move.canwalkright = true;
 		}
 
 		if(col.gameObject.tag == "Zip") {
@@ -275,7 +299,7 @@ public class player : MonoBehaviour {
 			transform.Translate (new Vector3 (-0.5f, 0.25f, 0.0f) * speed * 10 * Time.deltaTime);
 		}
 
-		if(col.gameObject.tag == "PfmGnd") {
+		/*if(col.gameObject.tag == "PfmGnd") {
         	grounded = true;
 			jump.candoublejump = false;
 			jump.jumpcurrentframe = 0;
@@ -288,7 +312,7 @@ public class player : MonoBehaviour {
 			anim.SetBool("Falling", false);
 			anim.SetBool("Hurt", false);
 			transform.parent = col.transform;
-        }
+        }*/
 
         /*if(col.gameObject.tag == "Mayo") {
 			//block.mayoair = true;
@@ -302,7 +326,7 @@ public class player : MonoBehaviour {
 			move.canwalkright = false;
 		}
 
-		if(col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl" && falling == true) {
+		if((col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl") && falling == true) {
 			grounded = false;
 			slam.slamming = false;
 			rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -318,7 +342,7 @@ public class player : MonoBehaviour {
 			transform.Translate (new Vector3 (-0.5f, 0.25f, 0.0f) * speed * 10 * Time.deltaTime);
 		}
 
-		if(col.gameObject.tag == "PfmGnd") {
+		/*if(col.gameObject.tag == "PfmGnd") {
         	grounded = true;
 			jump.candoublejump = false;
 			jump.jumpcurrentframe = 0;
@@ -330,7 +354,7 @@ public class player : MonoBehaviour {
 			anim.SetBool("Double Jumping", false);
 			anim.SetBool("Falling", false);
 			transform.parent = col.transform;
-        }
+        }*/
 
         /*if(col.gameObject.tag == "Mayo") {
 			//block.mayoair = true;
@@ -346,19 +370,19 @@ public class player : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D col) {
-		if(col.gameObject.tag == "PfmGnd") {
+		/*if(col.gameObject.tag == "PfmGnd") {
 			grounded = false;
 			jump.candoublejump = false;
 			anim.SetBool("Falling", true);
         	transform.parent = null;
-        }
+        }*/
 
         if(col.gameObject.tag == "Lwl") {
-			move.canwalkleft = true;
+			//move.canwalkleft = true;
 		}
 
 		if(col.gameObject.tag == "Rwl") {
-			move.canwalkright = true;
+			//move.canwalkright = true;
 		}
 	}
 }
