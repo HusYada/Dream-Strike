@@ -299,7 +299,7 @@ public class player : MonoBehaviour {
 			transform.Translate (new Vector3 (-0.5f, 0.25f, 0.0f) * speed * 10 * Time.deltaTime);
 		}
 
-		/*if(col.gameObject.tag == "PfmGnd") {
+		if(col.gameObject.tag == "PfmGnd") {
         	grounded = true;
 			jump.candoublejump = false;
 			jump.jumpcurrentframe = 0;
@@ -312,7 +312,7 @@ public class player : MonoBehaviour {
 			anim.SetBool("Falling", false);
 			anim.SetBool("Hurt", false);
 			transform.parent = col.transform;
-        }*/
+        }
 
         /*if(col.gameObject.tag == "Mayo") {
 			//block.mayoair = true;
@@ -342,7 +342,7 @@ public class player : MonoBehaviour {
 			transform.Translate (new Vector3 (-0.5f, 0.25f, 0.0f) * speed * 10 * Time.deltaTime);
 		}
 
-		/*if(col.gameObject.tag == "PfmGnd") {
+		if(col.gameObject.tag == "PfmGnd") {
         	grounded = true;
 			jump.candoublejump = false;
 			jump.jumpcurrentframe = 0;
@@ -354,7 +354,7 @@ public class player : MonoBehaviour {
 			anim.SetBool("Double Jumping", false);
 			anim.SetBool("Falling", false);
 			transform.parent = col.transform;
-        }*/
+        }
 
         /*if(col.gameObject.tag == "Mayo") {
 			//block.mayoair = true;
@@ -370,12 +370,12 @@ public class player : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D col) {
-		/*if(col.gameObject.tag == "PfmGnd") {
+		if(col.gameObject.tag == "PfmGnd") {
 			grounded = false;
 			jump.candoublejump = false;
 			anim.SetBool("Falling", true);
         	transform.parent = null;
-        }*/
+        }
 
         if(col.gameObject.tag == "Lwl") {
 			//move.canwalkleft = true;

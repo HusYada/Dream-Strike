@@ -52,11 +52,16 @@ public class playerjump : MonoBehaviour {
 		// If z/A button is pressed and the player is on the ground and the "Jump" ability is equipped and the game is unpaused, the player will jump
 		if (plyr.locked == false && (Input.GetKeyDown("z") || xboxp1_a == true) && plyr.grounded == true && abt.eqpdjump == true && menuu.paused == false && plyr.falling == false) {
 			jumping = true;
+			rb.velocity = new Vector2(0, 0);
 		}
 
 		// If the player is jumping, the player will be forced upwards
 		if (jumping == true) {
-			rb.AddForce(Vector2.up * (jump - 60));
+
+			if((Input.GetKey("left") || Input.GetKey("right")) && plyr.grounded == true) {
+				rb.AddForce(Vector2.up * jump);
+			}
+			rb.AddForce(Vector2.up * (jump - ((jump/5) * 2)));
 			if(block.mayoshooting == false && plyr.grounded == false) {
 				anim.SetBool("Jumping", true);
 			}
@@ -83,6 +88,10 @@ public class playerjump : MonoBehaviour {
 			plyr.grounded = false;
 			djumped = true;
 		}*/
+
+		if(jumpcurrentframe == 0 && jumping == true) {
+			rb.velocity = new Vector2(0, 0);
+		}
 
 		// If the number of the frames that's passed for the jump animation surpasses the time it should take for the jump animation to finish, the jump will stop
 		if (jumpcurrentframe > jumptime) {

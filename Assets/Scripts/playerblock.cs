@@ -128,6 +128,7 @@ public class playerblock : MonoBehaviour {
  			} else if (plyr.grounded == false) {
  				mayoair = true;
  				anim.SetBool("Falling", true);
+ 				rb.constraints = RigidbodyConstraints2D.FreezePositionY;
  			}
 		}
 

@@ -55,8 +55,14 @@ public class camera : MonoBehaviour {
 	public float boundmaxx;
 	public float boundminy;
 	public float boundmaxy;
+	public float boundminx2;
+	public float boundmaxx2;
+	public float boundminy2;
+	public float boundmaxy2;
 	public float offsetx;
 	public float offsety;
+	public float offsetx2;
+	public float offsety2;
 	public Camera cam;
 	public player plyr;								// A script variable to access variables from the player script
 	//private Transform plyr; 		  // The player's position
@@ -67,6 +73,7 @@ public class camera : MonoBehaviour {
 
 	void Update() {
 
+		// If locked on an axis, the camera won't move along it
 		if(lockx == false && locky == false) {
 			transform.position = new Vector3(plyr.transform.position.x, plyr.transform.position.y, this.transform.position.z);
 		}

@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: 08b3a15f5aa10f5469c21e6fc36036a3
+timeCreated: 1523979076
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DP_PickUp_Spritesheet_0
+    21300002: DP_PickUp_Spritesheet_1
+    21300004: DP_PickUp_Spritesheet_2
+    21300006: DP_PickUp_Spritesheet_3
+    21300008: DP_PickUp_Spritesheet_4
+    21300010: DP_PickUp_Spritesheet_5
+    21300012: DP_PickUp_Spritesheet_6
+    21300014: DP_PickUp_Spritesheet_7
+    21300016: DP_PickUp_Spritesheet_8
+    21300018: DP_PickUp_Spritesheet_9
+    21300020: DP_PickUp_Spritesheet_10
+    21300022: DP_PickUp_Spritesheet_11
+    21300024: DP_PickUp_Spritesheet_12
+    21300026: DP_PickUp_Spritesheet_13
+    21300028: DP_PickUp_Spritesheet_14
+    21300030: DP_PickUp_Spritesheet_15
+    21300032: DP_PickUp_Spritesheet_16
+    21300034: DP_PickUp_Spritesheet_17
+    21300036: DP_PickUp_Spritesheet_18
+    21300038: DP_PickUp_Spritesheet_19
+    21300040: DP_PickUp_Spritesheet_20
+    21300042: DP_PickUp_Spritesheet_21
+    21300044: DP_PickUp_Spritesheet_22
+    21300046: DP_PickUp_Spritesheet_23
+    21300048: DP_PickUp_Spritesheet_24
+    21300050: DP_PickUp_Spritesheet_25
+    21300052: DP_PickUp_Spritesheet_26
+    21300054: DP_PickUp_Spritesheet_27
+    21300056: DP_PickUp_Spritesheet_28
+    21300058: DP_PickUp_Spritesheet_29
+    21300060: DP_PickUp_Spritesheet_30
+    21300062: DP_PickUp_Spritesheet_31
+    21300064: DP_PickUp_Spritesheet_32
+    21300066: DP_PickUp_Spritesheet_33
+    21300068: DP_PickUp_Spritesheet_34
+    21300070: DP_PickUp_Spritesheet_35
+    21300072: DP_PickUp_Spritesheet_36
+    21300074: DP_PickUp_Spritesheet_37
+    21300076: DP_PickUp_Spritesheet_38
+    21300078: DP_PickUp_Spritesheet_39
+    21300080: DP_PickUp_Spritesheet_40
+    21300082: DP_PickUp_Spritesheet_41
+    21300084: DP_PickUp_Spritesheet_42
+    21300086: DP_PickUp_Spritesheet_43
+    21300088: DP_PickUp_Spritesheet_44
+    21300090: DP_PickUp_Spritesheet_45
+    21300092: DP_PickUp_Spritesheet_46
+    21300094: DP_PickUp_Spritesheet_47
+    21300096: DP_PickUp_Spritesheet_48
+    21300098: DP_PickUp_Spritesheet_49
+    21300100: DP_PickUp_Spritesheet_50
+    21300102: DP_PickUp_Spritesheet_51
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 513
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 342
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 171
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DP_PickUp_Spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 0
+        width: 138
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

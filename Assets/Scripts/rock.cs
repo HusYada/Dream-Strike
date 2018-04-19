@@ -154,7 +154,7 @@ public class rock : MonoBehaviour {
 
     public float RotateSpeed;
     public float Radius;
-    private bool go = false;
+    private bool go = true;
     public bool preparing = true;
     public bool jumping = false;
     public bool landing = false;
@@ -179,7 +179,7 @@ public class rock : MonoBehaviour {
  
     public void FixedUpdate() {
 
-        if(Input.GetKeyDown("h")) {
+        /*if(Input.GetKeyDown("h")) {
             go = true;
         }
 
@@ -188,7 +188,7 @@ public class rock : MonoBehaviour {
             transform.position = startt;
             counter = 0;
             anim.SetBool("Bounce", false);
-        }
+        }*/
 
         if(go == true) {
 
