@@ -57,8 +57,12 @@ public class playermovement : MonoBehaviour {
 			}
 
 			// Using the left vector to rotate the player to the left direction
-			if(plyr.locked == false) {
+			if(plyr.locked == false && plyr.gravityflip == false) {
 				transform.eulerAngles = plyr.leftvector;
+			}
+
+			if(plyr.locked == false && plyr.gravityflip == true) {
+				transform.eulerAngles = plyr.grightvector;
 			}
 
 		// Or if right is pressed/control stick is pushed right, the player will move right
@@ -79,8 +83,12 @@ public class playermovement : MonoBehaviour {
 			}
 
 			// Using the right vector to rotate the player to the right direction
-			if(plyr.locked == false) {
+			if(plyr.locked == false && plyr.gravityflip == false) {
 				transform.eulerAngles = plyr.rightvector;
+			}
+
+			if(plyr.locked == false && plyr.gravityflip == true) {
+				transform.eulerAngles = plyr.grightvector;
 			}
 
 			// If the player is not moving left or right, then the player is idle

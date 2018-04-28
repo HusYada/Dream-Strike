@@ -25,10 +25,17 @@ public class abtscreen : MonoBehaviour {
 	public int abtscreen_indexy = 0;
 
 	// Checks if the player has the ability
-	public bool hasbigjump = false;
-    public bool hascyberslam = true;
+	public bool haswalkleft = true;
+    public bool haswalkright = true;
+    public bool hasjump = true;
+    public bool hasattack = true;
+    public bool hashealthbar = true;
+    public bool haswallet = true;
+    public bool haspause = true;
+	public bool hascyberslam = true;
     public bool haspeashoot = true;
     public bool hasmayonaise = true;
+	public bool hasbigjump = false;
 
     //Checks if the player has the ability equipped
     public bool eqpdwalkleft = true;
@@ -44,6 +51,7 @@ public class abtscreen : MonoBehaviour {
     public bool eqpdcyberslam = false;
     public bool eqpdpeashoot = false;
     public bool eqpdmayonaise = false;
+    public bool eqpdgravity = false;
 
     // Textures for ability screen
 	public Texture2D abtscreencursor_texture;
@@ -85,15 +93,8 @@ public class abtscreen : MonoBehaviour {
     private int abtscreen_cooldowntime = 20; 
 
     // Checks if the player has the ability
-    private bool haswalkleft = true;
-    private bool haswalkright = true;
-    private bool hasjump = true;
-    private bool hasattack = true;
-    private bool hashealthbar = true;
-    private bool haswallet = true;
 	//private bool hasdance = false;
 	private bool hasmap = true;
-	private bool haspause = true;
 	// End of Private Variables
 
 	
@@ -370,7 +371,7 @@ public class abtscreen : MonoBehaviour {
         		if(abtscreen_indexx == 3 && abtscreen_indexy == 0) {
         			GUI.Label(new Rect(Screen.width/6.3f, Screen.height/1.2f, Screen.width/2f, Screen.height/8f), "Press the B button to attack with your sword", abtscreen_font);
 					GUI.Label(new Rect(Screen.width/6.3f, Screen.height/1.15f, Screen.width/2f, Screen.height/8f), "Can cut stuff, stops your ground movement briefly", abtscreen_font);
-					GUI.Label(new Rect(Screen.width/1.65f, Screen.height/1.15f, Screen.width/2f, Screen.height/8f), "3", abtscreen_font);
+					GUI.Label(new Rect(Screen.width/1.65f, Screen.height/1.15f, Screen.width/2f, Screen.height/8f), "2", abtscreen_font);
 				}
         	}
 

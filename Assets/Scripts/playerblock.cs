@@ -19,6 +19,8 @@ public class playerblock : MonoBehaviour {
 	private float mayodirection = 2.4f;
 	public int mayoshootcurrentframe = 0;	// The number of the frames that's passed for the shoot animation
 	public int mayoshoottime = 33;		// The time it takes to finish the mayo
+	public AudioClip mayoSFX; //sound clip played when mayoing
+	public AudioClip mayoprepSFX; //sound clip played when shooting
 	private int mayocooldowno = 200;	// The time it takes to get another mayo
 	private Rigidbody2D rb;					// The
 	private Animator anim;					// The animator for the player
@@ -120,6 +122,7 @@ public class playerblock : MonoBehaviour {
 		if(plyr.locked == false && (Input.GetKey("down") || vmove <= -1.0f) && (Input.GetKey("z") || xboxp1_a == true) && (this.transform.eulerAngles == plyr.rightvector || this.transform.eulerAngles == plyr.leftvector) && mayoshooting == false && abt.eqpdmayonaise == true) {
 			mayoshooting = true;
 			jump.jumping = false;
+			GetComponent<AudioSource>().PlayOneShot(mayoprepSFX, 0.5f); //the mayo prep sound effect is played 
 			if(plyr.grounded == true) {
  				//mayoair = false;
  				anim.SetBool("Jumping", false);
@@ -140,6 +143,7 @@ public class playerblock : MonoBehaviour {
  			move.canwalkleft = false;
 			move.canwalkright = false;*/
 			anim.SetBool("Mayo", true);
+
 			//anim.SetBool("Attacking", false);
 
 			//anim.SetBool("Falling", true);
@@ -178,6 +182,7 @@ public class playerblock : MonoBehaviour {
 		}
 
 		if(makeblock == true && mayoshooting == true && cockblock == false) {
+			GetComponent<AudioSource>().PlayOneShot(mayoSFX, 0.5f); //the mayo sound effect is played 
 			//mayoshooting = false;
 			//makeblock = false;
 			cockblock = true;

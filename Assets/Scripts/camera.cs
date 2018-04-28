@@ -67,11 +67,40 @@ public class camera : MonoBehaviour {
 	public player plyr;								// A script variable to access variables from the player script
 	//private Transform plyr; 		  // The player's position
 
+	//public bool ismovingx;
+	public bool ismovingleft;
+	public bool ismovingright;
+	private Vector3 campos;
+
 	void Start() {
 		//plyr = GameObject.FindGameObjectWithTag("Plyr").GetComponent<Transform>();
+		campos = this.transform.position;
 	}
 
 	void Update() {
+
+		// Is moving x axis
+		/*if (campos.x != this.transform.position.x) {
+         	ismovingx = true;
+     	} else {
+     		ismovingx = false;
+     	}*/
+
+     	// Is moving left
+     	if (campos.x > this.transform.position.x) {
+         	ismovingleft = true;
+     	} else {
+     		ismovingleft = false;
+     	}
+
+     	// Is moving right
+     	if (campos.x < this.transform.position.x) {
+         	ismovingright = true;
+     	} else {
+     		ismovingright = false;
+     	}
+
+     	campos.x = this.transform.position.x;
 
 		// If locked on an axis, the camera won't move along it
 		if(lockx == false && locky == false) {

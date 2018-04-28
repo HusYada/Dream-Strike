@@ -12,6 +12,7 @@ public class playershoot : MonoBehaviour {
 	public Transform leftprojectile; 	// The projectile that will be shot left, edit it in the Inspector
 	public Transform rightprojectile; 	// The projectile that will be shot right, edit it in the Inspector
 	public bool shooting = false;		// Checks if the player is shooting or not
+	public AudioClip shootSFX; //sound clip played when shooting
 	private bool shootleft = false;
 	private bool shootright = false;
 	private bool shootpealeft = false;
@@ -45,6 +46,7 @@ public class playershoot : MonoBehaviour {
 
 				shooting = true;
 				shootright = true;
+				GetComponent<AudioSource>().PlayOneShot(shootSFX, 0.5f); //the shoot sound effect is played 
 
 				// A transform that will instantiate an exsisting bullet to it's current position
  				//Transform rbullet = (Transform)Instantiate(rightprojectile, transform.position, transform.rotation);
@@ -59,6 +61,7 @@ public class playershoot : MonoBehaviour {
 
 				shooting = true;
 				shootleft = true;
+				GetComponent<AudioSource>().PlayOneShot(shootSFX, 0.5f); //the shoot sound effect is played 
 
 				// A transform that will instantiate an exsisting bullet to it's current position
  				//Transform lbullet = (Transform)Instantiate(leftprojectile, transform.position, transform.rotation);

@@ -12,6 +12,7 @@ public class playerslam : MonoBehaviour {
 	public bool slamming = false;		// Checks if the player is slamming
 	private float slamspeed = 19.5f;	// Slam speed
 	public int slamcurrentframe = 0;	// The number of the frames that's passed for the slam animation
+	public AudioClip slamSFX; //sound clip played when slamming
 	private int slamtime = 42;			// The time it takes to finish the slam
 	private Rigidbody2D rb;				// The rigidbody for the player
 	private Animator anim;				// The animator for the player
@@ -35,6 +36,7 @@ public class playerslam : MonoBehaviour {
 		if(plyr.locked == false && (Input.GetKeyDown("c") || xboxp1_x == true) && slamming == false && abt.eqpdcyberslam == true && canslam == true) { //&& this.transform.eulerAngles == plyr.rightvector
 			canslam = false;
 			slamming = true;
+			GetComponent<AudioSource>().PlayOneShot(slamSFX, 0.5f); //the slam sound effect is played 
 		}
 
 		// If the player can't slam, the slam timer will start

@@ -42,6 +42,20 @@ public class groundcheck : MonoBehaviour {
 			anim.SetBool("Hurt", false);
 		}
 
+		if(col.gameObject.tag == "Cln" && plyr.falling == false && plyr.gravityflip == true) {
+			plyr.grounded = true;
+			jump.candoublejump = false;
+			jump.jumpcurrentframe = 0;
+			jump.candjumpcurrentframe = 0;
+			jump.djumpcurrentframe = 0;
+			jump.djumped = false;
+			block.mayoair = false;
+			anim.SetBool("Jumping", false);
+			anim.SetBool("Double Jumping", false);
+			anim.SetBool("Falling", false);
+			anim.SetBool("Hurt", false);
+		}
+
 		if((col.gameObject.tag == "Lwl" || col.gameObject.tag == "Rwl") && plyr.falling == true) {
 			plyr.grounded = false;
 			slam.slamming = false;
@@ -69,7 +83,14 @@ public class groundcheck : MonoBehaviour {
 
 	void OnCollisionStay2D(Collision2D col) {
 		// If the player is on the ground, then they are still grounded
-		if(col.gameObject.tag == "Gnd") {
+		if(col.gameObject.tag == "Gnd" && plyr.gravityflip == false) {
+			plyr.grounded = true;
+			block.mayoair = false;
+			//falling = false;
+			anim.SetBool("Falling", false);
+		}
+
+		if(col.gameObject.tag == "Cln" && plyr.gravityflip == true) {
 			plyr.grounded = true;
 			block.mayoair = false;
 			//falling = false;
@@ -102,7 +123,13 @@ public class groundcheck : MonoBehaviour {
 	void OnCollisionExit2D(Collision2D col) {
 
 		// If the player is no longer colliding with the ground, then the player is not grounded
-		if(col.gameObject.tag == "Gnd") {
+		if(col.gameObject.tag == "Gnd" && plyr.gravityflip == false) {
+			plyr.grounded = false;
+			jump.candoublejump = false;
+			anim.SetBool("Falling", true);
+		}
+
+		if(col.gameObject.tag == "Cln" && plyr.gravityflip == true) {
 			plyr.grounded = false;
 			jump.candoublejump = false;
 			anim.SetBool("Falling", true);

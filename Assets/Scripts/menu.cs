@@ -21,6 +21,8 @@ public class menu : MonoBehaviour {
     public int menu_cooldowntime;
     public int menu_cooldowncounter;
 
+    public Sprite abtscreeno;
+
     // Textures for menu screens
 	public Texture2D ivtscreen_texture;
 	public Texture2D abtscreen_texture;
@@ -37,6 +39,9 @@ public class menu : MonoBehaviour {
 	void Update() {
 
 		bool xboxp1_start = Input.GetButtonDown("XBOXP1_START");
+
+		// A variable set to the Xbox 360/Xbox One controller's LB button to see if it's been pressed
+		bool xboxp1_b = Input.GetButton("XBOXP1_B");
 
 		// If the return key/Start button is pressed, the game will switch from a paused or unpaused state
 		//if(Input.GetKeyDown(KeyCode.Return) || xboxp1_start == true && canpause == true) {
@@ -60,6 +65,15 @@ public class menu : MonoBehaviour {
         	if(abt.eqpdpause == false && canpause == true) {
         		Time.timeScale = 1;
         	}
+    	}
+
+    	if((Input.GetKeyDown("x") || xboxp1_b == true) && paused == true) {
+    		paused = false;
+    		Time.timeScale = 1;
+    	}
+
+    	if(Input.GetKeyDown("g")) {
+    		abt.eqpdgravity = !abt.eqpdgravity;
     	}
 	}
 

@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: da9b771709b26a64b845a881adac6af2
-timeCreated: 1523566622
+timeCreated: 1524342297
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: MenuFACE Spritesheet_0
+    21300002: MenuFACE Spritesheet_1
+    21300004: MenuFACE Spritesheet_2
+    21300006: MenuFACE Spritesheet_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,7 +98,63 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MenuFACE Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7221
+        width: 1920
+        height: 2407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MenuFACE Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4814
+        width: 1920
+        height: 2407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MenuFACE Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2407
+        width: 1920
+        height: 2407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MenuFACE Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 2407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

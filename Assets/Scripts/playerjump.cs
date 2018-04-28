@@ -24,6 +24,8 @@ public class playerjump : MonoBehaviour {
 	public bool candoublejump = false;				// Checks if the player can use the "Double Jump" ability
 	public bool jumped = false;						// Checks if the player jumped
 	public bool djumped = false;					// Checks if the player double jumped
+
+	public AudioClip jumpSFX; //sound clip played when jumping
 	// End of Public Variables	
 
 	// Private Variables
@@ -53,15 +55,26 @@ public class playerjump : MonoBehaviour {
 		if (plyr.locked == false && (Input.GetKeyDown("z") || xboxp1_a == true) && plyr.grounded == true && abt.eqpdjump == true && menuu.paused == false && plyr.falling == false) {
 			jumping = true;
 			rb.velocity = new Vector2(0, 0);
+			if(block.mayoshooting == false || block.makeblock == true) {
+				GetComponent<AudioSource>().PlayOneShot(jumpSFX, 0.25f); //the jump sound effect is played 
+			}
 		}
 
 		// If the player is jumping, the player will be forced upwards
 		if (jumping == true) {
 
-			if((Input.GetKey("left") || Input.GetKey("right")) && plyr.grounded == true) {
+			/*if((Input.GetKey("left") || Input.GetKey("right")) && plyr.grounded == true) {
 				rb.AddForce(Vector2.up * jump);
+			}*/
+			//rb.AddForce(Vector2.up * (jump - ((jump/5) * 2)));
+			if(plyr.gravityflip == false) {
+				rb.AddForce(Vector2.up * (jump - ((jump/5) * 1)));
 			}
-			rb.AddForce(Vector2.up * (jump - ((jump/5) * 2)));
+
+			if(plyr.gravityflip == true) {
+				rb.AddForce((Vector2.up * (jump - ((jump/5) * 1))) * -1);
+			}
+
 			if(block.mayoshooting == false && plyr.grounded == false) {
 				anim.SetBool("Jumping", true);
 			}

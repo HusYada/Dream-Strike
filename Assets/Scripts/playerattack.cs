@@ -10,6 +10,7 @@
 		public playermovement move;
 		public abtscreen abt;				// A script variable to access variables from the abtscreen script
 		public bool attacking = false;		// Checks if the player is attacking
+		public AudioClip attackSFX; //sound clip played when attacking
 		private int attackcurrentframe = 0;	// The number of the frames that's passed for the attack animation
 		private int attacktime = 15;		// The time it takes to finish the attack
 		private Rigidbody2D rb;				// The rigidbody for the player
@@ -30,6 +31,7 @@
 			// If x/B button is pressed and the "Attack" ability is equipped, then the player will be attacking
 			if (plyr.locked == false && (Input.GetKey("x") || xboxp1_b == true) && abt.eqpdattack == true) {
 				attacking = true;
+
 			}
 
 			// If the player is attacking, they will stand still and attack; the attack timer will start too
@@ -47,6 +49,10 @@
 				anim.SetBool("Attacking", true);
 				plyr.idle = false;
 				attackcurrentframe++;
+			}
+
+			if (attackcurrentframe == (attacktime - (attacktime - 1)) && attacking == true) {
+				plyr.GetComponent<AudioSource>().PlayOneShot(attackSFX, 0.5f); //the attack sound effect is played
 			}
 
 			// When the counter for the attack is greater than the attack time, the attack will finish and attackcurrentframe is reset
