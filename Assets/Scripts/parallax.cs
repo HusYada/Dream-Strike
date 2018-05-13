@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿// Parallax Script for Dream Strike
+
+// Not using this as it does not follow the speed of the player
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

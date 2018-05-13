@@ -1,4 +1,4 @@
-﻿// Inventory Script for Dream Strike
+﻿// Inventory Cursor Script for Dream Strike by Huseyin Geyik
 
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +13,6 @@ public class invscreen_cursor : MonoBehaviour {
 	// Co-ordinates for the inventory screen cursor
 	public int ivtscreen_indexx = 0;
 	public int ivtscreen_indexy = 0;
-
 	private float ivtscreen_posx = Screen.width/5f;
 	private float ivtscreen_posy = Screen.height/4f;
 
@@ -72,6 +71,7 @@ public class invscreen_cursor : MonoBehaviour {
 			}
 		}
 
+		// Cooldown for the counter so it doesn't go too fast
 		if (ivtscreen_iscooldown == true) {
            	ivtscreen_cooldowncounter++;
        	}

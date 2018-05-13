@@ -1,4 +1,4 @@
-﻿// Enemy Waypoints Script for Dream Strike
+﻿// Enemy Waypoints Script for Dream Strike by Huseyin Geyik
 
 using System.Collections;
 using System.Collections.Generic;

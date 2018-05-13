@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Left Right Script for Dream Strike
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

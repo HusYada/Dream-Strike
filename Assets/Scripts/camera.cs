@@ -1,90 +1,32 @@
 ﻿// Camera Script for Dream Strike
-// Reference - George Games, 12 Dec 2015. Metroidvania Camera Boundaries Unity Tutorial. [online video] Available at: https://www.youtube.com/watch?v=3qfbJ-JSrOc [Accessed at 30 September 2017].
-// Helpful source for getting the camera set up
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class camera : MonoBehaviour {
-
-	public Camera cam;
-	private Transform player; 		  // The player's position
-	private BoxCollider2D cameraview; // The camera's view box
-
-	void Start () {
-		// Getting components
-		player = GameObject.FindGameObjectWithTag("Plyr").GetComponent<Transform>();
-		cameraview = GetComponent<BoxCollider2D>();
-	}
-	
-	void Update () {
-
-		if(Input.GetKey("y")) {
-			cam.orthographicSize++;
-		}
-		if(Input.GetKey("u")) {
-			cam.orthographicSize--;
-		}
-		if(Input.GetKey("i")) {
-			cam.orthographicSize = 6.0f;
-		}
-	
-		// Setting the size of the camera view
-		if(Camera.main.aspect >= (1.6f) && Camera.main.aspect < 1.7f){
-			cameraview.size = new Vector2 (21.35f, 11.97f);
-		}
-
-		// If the camera is inside a boundary, the camera view will be locked inside it's box collider until the player moves outside of it
-	   	// When that happens, the boundary will switch to the one the player is currently in
-		if(GameObject.Find("Boundary")) {
-			transform.position = new Vector3 (Mathf.Clamp (player.position.x, GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.min.x + cameraview.size.x / 2, 
-																			  GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.max.x - cameraview.size.x / 2),
-											  Mathf.Clamp (player.position.y, GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.min.y + cameraview.size.y / 2, 
-											  								  GameObject.Find("Boundary").GetComponent<BoxCollider2D>().bounds.max.y - cameraview.size.y / 2),
-											  transform.position.z);
-		}
-	}
-}*/
-
 public class camera : MonoBehaviour {
 
-	public bool lockx;
-	public bool locky;
-	public float boundminx;
-	public float boundmaxx;
-	public float boundminy;
-	public float boundmaxy;
-	public float boundminx2;
-	public float boundmaxx2;
-	public float boundminy2;
-	public float boundmaxy2;
-	public float offsetx;
-	public float offsety;
-	public float offsetx2;
-	public float offsety2;
-	public Camera cam;
-	public player plyr;								// A script variable to access variables from the player script
-	//private Transform plyr; 		  // The player's position
-
-	//public bool ismovingx;
-	public bool ismovingleft;
-	public bool ismovingright;
-	private Vector3 campos;
+	public bool lockx;					// Checks if the camera can move on the x axis
+	public bool locky;					// Checks if the camera can move on the y axis
+	public float boundminx;				// The most left boundary for the camera
+	public float boundmaxx;				// The most right boundary for the camera
+	public float boundminy;				// The lower boundary for the camera
+	public float boundmaxy;				// The upper boundary for the camera
+	public float offsetx;				// The x axis offset for the camera
+	public float offsety;				// The y axis offset for the camera
+	public Camera cam;					// The camera to use
+	public player plyr;					// A script variable to access variables from the player script
+	public bool ismovingleft;			// Checks if the player is moving left
+	public bool ismovingright;			// Checks if the player is moving right
+	private Vector3 campos;				// The camera's position
 
 	void Start() {
-		//plyr = GameObject.FindGameObjectWithTag("Plyr").GetComponent<Transform>();
+		
+		// Setting the camera position
 		campos = this.transform.position;
 	}
 
 	void Update() {
-
-		// Is moving x axis
-		/*if (campos.x != this.transform.position.x) {
-         	ismovingx = true;
-     	} else {
-     		ismovingx = false;
-     	}*/
 
      	// Is moving left
      	if (campos.x > this.transform.position.x) {
@@ -100,6 +42,7 @@ public class camera : MonoBehaviour {
      		ismovingright = false;
      	}
 
+     	// The camera's x position should be the same as the gameObject
      	campos.x = this.transform.position.x;
 
 		// If locked on an axis, the camera won't move along it
@@ -135,6 +78,7 @@ public class camera : MonoBehaviour {
 			locky = false;
 		}
 
+		// Hotkeys for zooming in or out the camera for debugging
 		if(Input.GetKey("y")) {
 			cam.orthographicSize++;
 		}

@@ -1,0 +1,26 @@
+Its a rolling rolling roll roll notes:
+
+- Da  preview anim should show you how the rolls should move.
+
+-There are two different types of rolls, a big one and a 
+small one. They both have different timings, the small
+one moves faster. 
+
+-BehindGround means that this anim should play behind the
+first background layer (where we walk)
+
+-FrontofGround means that this anim should play in
+front of the first background layer, but behind coins,
+enemies and the player.
+
+-InFrontofAll means that this anim should play
+in front of EVERYTHING.
+
+-Currently the rolls just dissapear when they end. This
+might look fine, it might not. Either way I don't
+have the time to animate a nice solution.
+
+-The hazard collision box should prob appear between the
+last half of the FrontofGround anim and a bit after
+the start of the InFrontofAll anim. You can
+figure it out tho.

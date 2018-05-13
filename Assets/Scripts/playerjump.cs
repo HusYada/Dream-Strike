@@ -1,4 +1,4 @@
-﻿// Player Jump Script for Dream Strike
+﻿// Player Jump Script for Dream Strike by Huseyin Geyik
 
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ public class playerjump : MonoBehaviour {
 
 	// Public Script Variables	
 	public player plyr;								// A script variable to access variables from the player script
-	public playerblock block;
+	public playerblock block;						// A script variable to access variables from the playerblock script
 	public menu menuu;								// A script variable to access variables from the menu script
 	public abtscreen abt;							// A script variable to access variables from the abtscreen script
 	// End of Public Script Variables	
@@ -25,7 +25,7 @@ public class playerjump : MonoBehaviour {
 	public bool jumped = false;						// Checks if the player jumped
 	public bool djumped = false;					// Checks if the player double jumped
 
-	public AudioClip jumpSFX; //sound clip played when jumping
+	public AudioClip jumpSFX; //Sound clip that plays when the player jumps
 	// End of Public Variables	
 
 	// Private Variables
@@ -52,9 +52,11 @@ public class playerjump : MonoBehaviour {
 		Vector2 velocitystop = rb.velocity;
 
 		// If z/A button is pressed and the player is on the ground and the "Jump" ability is equipped and the game is unpaused, the player will jump
-		if (plyr.locked == false && (Input.GetKeyDown("z") || xboxp1_a == true) && plyr.grounded == true && abt.eqpdjump == true && menuu.paused == false && plyr.falling == false) {
+		if (plyr.locked == false && (Input.GetKeyDown("z") || xboxp1_a == true) && plyr.grounded == true && abt.eqpdjump == true && plyr.falling == false) {
 			jumping = true;
-			rb.velocity = new Vector2(0, 0);
+			if(plyr.soaped == false) {
+				rb.velocity = new Vector2(0, 0);
+			}
 			if(block.mayoshooting == false || block.makeblock == true) {
 				GetComponent<AudioSource>().PlayOneShot(jumpSFX, 0.25f); //the jump sound effect is played 
 			}
@@ -67,17 +69,31 @@ public class playerjump : MonoBehaviour {
 				rb.AddForce(Vector2.up * jump);
 			}*/
 			//rb.AddForce(Vector2.up * (jump - ((jump/5) * 2)));
-			if(plyr.gravityflip == false) {
+			//if(plyr.gravityflip == false && && cansoap = false;) {
+
+			// Normal Jump
+			if(plyr.soaped == false || plyr.cansoap == false || abt.eqpdgoodgrip == true) {
 				rb.AddForce(Vector2.up * (jump - ((jump/5) * 1)));
+			}
+
+			// Soap Jump (can jump off of walls)
+			if(plyr.soaped == true && plyr.cansoap == true && abt.eqpdgoodgrip == false) {
+					rb.AddForce(new Vector2(-0.5f,1f) * (jump - ((jump/5) * 1)));
+			}
+
+			/*if(plyr.soaped == true && plyr.cansoap == true && plyr.lookingright == true) {
+				rb.AddForce(new Vector2(1,1) * (jump - ((jump/5) * 1)));
 			}
 
 			if(plyr.gravityflip == true) {
 				rb.AddForce((Vector2.up * (jump - ((jump/5) * 1))) * -1);
-			}
+			}*/
 
+			// If the player isn't creating a mayo block or isn't grounded, the jump anim will play
 			if(block.mayoshooting == false && plyr.grounded == false) {
 				anim.SetBool("Jumping", true);
 			}
+
 			candoublejump = false;
 			plyr.grounded = false;
 			plyr.idle = false;
@@ -88,7 +104,9 @@ public class playerjump : MonoBehaviour {
 
 		// If z/A button is released, the jump will stop
 		if ((Input.GetKeyUp("z") || xboxp1_aup == true) && jumpcurrentframe > 0) {
-			rb.velocity = new Vector2(0, 0);
+			if(plyr.soaped == false) {
+				rb.velocity = new Vector2(0, 0);
+			}
 		}
 
 		// If z/A button is pressed and the player is not on the ground and the player can double jump and the "Jump" ability is equipped, the player will jump again in midair
@@ -102,8 +120,11 @@ public class playerjump : MonoBehaviour {
 			djumped = true;
 		}*/
 
+		// When the jump starts, player velocity is reset
 		if(jumpcurrentframe == 0 && jumping == true) {
-			rb.velocity = new Vector2(0, 0);
+			if(plyr.soaped == false) {
+				rb.velocity = new Vector2(0, 0);
+			}
 		}
 
 		// If the number of the frames that's passed for the jump animation surpasses the time it should take for the jump animation to finish, the jump will stop

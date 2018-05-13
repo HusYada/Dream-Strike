@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Bonus Check Script for Dream Strike by Huseyin Geyik
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +8,11 @@ public class bonuscheck : MonoBehaviour {
 
 	// Do you like if statements?
 
-	public player plyr;			// A script variable to access variables from the abtscreen script
-	public abtscreen abt;			// A script variable to access variables from the abtscreen script
-	public bonus bns;
+	public player plyr;			// A script variable to access variables from the player script
+	public abtscreen abt;		// A script variable to access variables from the abtscreen script
+	public bonus bns;			// A script variable to access variables from the bonus script
 
+	// Checks DP of the player
 	public float olddp = 0f;
 	public float olddpmax = 0f;
 	public float olddp2 = 0f;
@@ -28,6 +31,9 @@ public class bonuscheck : MonoBehaviour {
 	public bool hadcyberslam;
     public bool hadpeashoot;
     public bool hadmayonaise;
+    public bool hadsoap;
+    public bool hadgoodgrip;
+    public bool hadrollerskates;
 
     // Was that ability equipped?
     public bool eqpddwalkleft = true;
@@ -40,6 +46,9 @@ public class bonuscheck : MonoBehaviour {
     public bool eqpddcyberslam;
     public bool eqpddpeashoot;
     public bool eqpddmayonaise;
+    public bool eqpddsoap;
+    public bool eqpddgoodgrip;
+    public bool eqpddrollerskates;
 
     // Bonus bois
     public bool bonuswalkleft;
@@ -52,30 +61,136 @@ public class bonuscheck : MonoBehaviour {
     public bool bonuscyberslam;
     public bool bonuspeashoot;
     public bool bonusmayonaise;
+    public bool bonussoap;
+    public bool bonusgoodgrip;
+    public bool bonusrollerskates;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
 	void Update () {
 
+		// If the player touches a hot dog stand, there DP is recorded
 		if(bns.gohere == plyr.transform.position) {
 			olddp = plyr.apcurrent;
 			olddpmax = plyr.apmax;
 		}
 
+		// Checks what the player has
+		if(abt.haswalkleft == true) {
+			hadwalkleft = true;
+		}
+
+		if(abt.haswalkright == true) {
+			hadwalkright = true;
+		}
+
+		if(abt.hasjump == true) {
+			hadjump = true;
+		}
+
+		if(abt.hasattack == true) {
+			hadattack = true;
+		}
+
+		if(abt.hashealthbar == true) {
+			hadhealthbar = true;
+		}
+
+		if(abt.haswallet == true) {
+			hadwallet = true;
+		}
+
+		if(abt.haspause == true) {
+			hadpause = true;
+		}
+
+		if(abt.hascyberslam == true) {
+			hadcyberslam = true;
+		}
+
+		if(abt.haspeashoot == true) {
+			hadpeashoot = true;
+		}
+
+		if(abt.hasmayonaise == true) {
+			hadmayonaise = true;
+		}
+
+		if(abt.hassoap == true) {
+			hadsoap = true;
+		}
+
+		if(abt.hasgoodgrip == true) {
+			hadgoodgrip = true;
+		}
+
+		if(abt.hasrollerskates == true) {
+			hadrollerskates = true;
+		}
+
+		// Checks what the player equipped
+		if(abt.eqpdwalkleft == true) {
+			eqpddwalkleft = true;
+		}
+		
+		if(abt.eqpdwalkright == true) {
+			eqpddwalkright = true;
+		}
+
+		if(abt.eqpdjump == true) {
+			eqpddjump = true;
+		}
+
+		if(abt.eqpdattack == true) {
+			eqpddattack = true;
+		}
+
+		if(abt.eqpdhealthbar == true) {
+			eqpddhealthbar = true;
+		}
+
+		if(abt.eqpdwallet == true) {
+			eqpddwallet = true;
+		}
+
+		if(abt.eqpdpause == true) {
+			eqpddpause = true;
+		}
+
+		if(abt.eqpdcyberslam == true) {
+			eqpddcyberslam = true;
+		}
+
+		if(abt.eqpdpeashoot == true) {
+			eqpddpeashoot = true;
+		}
+
+		if(abt.eqpdmayonaise == true) {
+			eqpddmayonaise = true;
+		}
+
+		if(abt.eqpdsoap == true) {
+			eqpddsoap = true;
+		}
+
+		if(abt.eqpdgoodgrip == true) {
+			eqpddgoodgrip = true;
+		}
+
+		if(abt.eqpdrollerskates == true) {
+			eqpddrollerskates = true;
+		}
+
+		// If the player is in a bonus, their DP and ability loadout is changed for the bonus
 		if(plyr.isbonus == true && plyr.bonuscomplete == false) {
 
-			//if(olddp == plyr.apcurrent || olddpmax == plyr.apmax) {
+			if(olddp == plyr.apcurrent || olddpmax == plyr.apmax) {
 				plyr.apcurrent = changedp;
 				plyr.apmax = changedpmax;
 				olddp2 = olddp;
 				olddpmax2 = olddpmax;
-			//}
+			}
 
-			// Change cp accordingly
+			// Change dp accordingly
 			//plyr.apcurrent = changedp;
 			//plyr.apmax = changedpmax;
 
@@ -129,6 +244,21 @@ public class bonuscheck : MonoBehaviour {
 		if(abt.hasmayonaise == true && bonusmayonaise == false) {
 			abt.hasmayonaise = false;
 			hadmayonaise = true;
+		}
+
+		if(abt.hassoap == true && bonussoap == false) {
+			abt.hassoap = false;
+			hadsoap = true;
+		}
+
+		if(abt.hasgoodgrip == true && bonusgoodgrip == false) {
+			abt.hasgoodgrip = false;
+			hadgoodgrip = true;
+		}
+
+		if(abt.hasrollerskates == true && bonusrollerskates == false) {
+			abt.hasrollerskates = false;
+			hadrollerskates = true;
 		}
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -190,6 +320,21 @@ public class bonuscheck : MonoBehaviour {
 			eqpddmayonaise = true;
 		}
 
+		if(abt.eqpdsoap == true && bonussoap == false) {
+			abt.eqpdsoap = false;
+			eqpddsoap = true;
+		}
+
+		if(abt.eqpdgoodgrip == true && bonusgoodgrip == false) {
+			abt.eqpdgoodgrip = false;
+			eqpddgoodgrip = true;
+		}
+
+		if(abt.eqpdrollerskates == true && bonusrollerskates == false) {
+			abt.eqpdrollerskates = false;
+			eqpddrollerskates = true;
+		}
+
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//////  ///////////////////////*********************************BOIBOIBOIBOI*************************************///////////////////////////////  //////
 		//////  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  //////
@@ -223,6 +368,21 @@ public class bonuscheck : MonoBehaviour {
 		if(abt.hasmayonaise == false && bonusmayonaise == true) {
 			abt.hasmayonaise = true;
 			hadmayonaise = false;
+		}
+
+		if(abt.hassoap == false && bonussoap == true) {
+			abt.hassoap = true;
+			hadsoap = false;
+		}
+
+		if(abt.hasgoodgrip == false && bonusgoodgrip == true) {
+			abt.hasgoodgrip = true;
+			hadgoodgrip = false;
+		}
+
+		if(abt.hasrollerskates == false && bonusrollerskates == true) {
+			abt.hasrollerskates = true;
+			hadrollerskates = false;
 		}
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -284,6 +444,21 @@ public class bonuscheck : MonoBehaviour {
 			abt.eqpdmayonaise = true;
 			eqpddmayonaise = false;
 		}
+
+		if(abt.eqpdsoap == false && bonussoap == true) {
+			abt.eqpdsoap = true;
+			eqpddsoap = false;
+		}
+
+		if(abt.eqpdgoodgrip == false && bonusgoodgrip == true) {
+			abt.eqpdgoodgrip = true;
+			eqpddgoodgrip = false;
+		}
+
+		if(abt.eqpdrollerskates == false && bonusrollerskates == true) {
+			abt.eqpdrollerskates = true;
+			eqpddrollerskates = false;
+		}
 		}
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -298,7 +473,7 @@ public class bonuscheck : MonoBehaviour {
 		if(plyr.isbonus == false && plyr.bonuscomplete == true) {
 
 			plyr.apcurrent = olddp2;
-			plyr.apmax = olddpmax2;
+			plyr.apmax = olddpmax2 + 1;
 
 			if(hadwalkleft == true) {
 				abt.haswalkleft = true;
@@ -358,6 +533,24 @@ public class bonuscheck : MonoBehaviour {
 				abt.hasmayonaise = true;
 			} else if(hadmayonaise == false) {
 				abt.hasmayonaise = false;
+			}
+
+			if(hadsoap == true) {
+				abt.hassoap = true;
+			} else if(hadsoap == false) {
+				abt.hassoap = false;
+			}
+
+			if(hadgoodgrip == true) {
+				abt.hasgoodgrip = true;
+			} else if(hadgoodgrip == false) {
+				abt.hasgoodgrip = false;
+			}
+
+			if(hadrollerskates == true) {
+				abt.hasrollerskates = true;
+			} else if(hadrollerskates == false) {
+				abt.hasrollerskates = false;
 			}
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -429,6 +622,24 @@ public class bonuscheck : MonoBehaviour {
 			} else if(eqpddmayonaise == false) {
 				abt.eqpdmayonaise = false;
 			}
+
+			if(eqpddsoap == true) {
+				abt.eqpdsoap = true;
+			} else if(eqpddsoap == false) {
+				abt.eqpdsoap = false;
+			}
+
+			if(eqpddgoodgrip == true) {
+				abt.eqpdgoodgrip = true;
+			} else if(eqpddgoodgrip == false) {
+				abt.eqpdgoodgrip = false;
+			}
+
+			//if(eqpddrollerskates == true) {
+			//	abt.eqpdrollerskates = true;
+			//} else if(eqpddrollerskates == false) {
+				abt.eqpdrollerskates = false;
+			//}
 		}
 	}
 }

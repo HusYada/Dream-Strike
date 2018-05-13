@@ -1,0 +1,1115 @@
+fileFormatVersion: 2
+guid: 2a5ca9e729acca14f94ef214c58ee3d7
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: muscloaf shotput spritesheet_0
+    21300002: muscloaf shotput spritesheet_1
+    21300004: muscloaf shotput spritesheet_2
+    21300006: muscloaf shotput spritesheet_3
+    21300008: muscloaf shotput spritesheet_4
+    21300010: muscloaf shotput spritesheet_5
+    21300012: muscloaf shotput spritesheet_6
+    21300014: muscloaf shotput spritesheet_7
+    21300016: muscloaf shotput spritesheet_8
+    21300018: muscloaf shotput spritesheet_9
+    21300020: muscloaf shotput spritesheet_10
+    21300022: muscloaf shotput spritesheet_11
+    21300024: muscloaf shotput spritesheet_12
+    21300026: muscloaf shotput spritesheet_13
+    21300028: muscloaf shotput spritesheet_14
+    21300030: muscloaf shotput spritesheet_15
+    21300032: muscloaf shotput spritesheet_16
+    21300034: muscloaf shotput spritesheet_17
+    21300036: muscloaf shotput spritesheet_18
+    21300038: muscloaf shotput spritesheet_19
+    21300040: muscloaf shotput spritesheet_20
+    21300042: muscloaf shotput spritesheet_21
+    21300044: muscloaf shotput spritesheet_22
+    21300046: muscloaf shotput spritesheet_23
+    21300048: muscloaf shotput spritesheet_24
+    21300050: muscloaf shotput spritesheet_25
+    21300052: muscloaf shotput spritesheet_26
+    21300054: muscloaf shotput spritesheet_27
+    21300056: muscloaf shotput spritesheet_28
+    21300058: muscloaf shotput spritesheet_29
+    21300060: muscloaf shotput spritesheet_30
+    21300062: muscloaf shotput spritesheet_31
+    21300064: muscloaf shotput spritesheet_32
+    21300066: muscloaf shotput spritesheet_33
+    21300068: muscloaf shotput spritesheet_34
+    21300070: muscloaf shotput spritesheet_35
+    21300072: muscloaf shotput spritesheet_36
+    21300074: muscloaf shotput spritesheet_37
+    21300076: muscloaf shotput spritesheet_38
+    21300078: muscloaf shotput spritesheet_39
+    21300080: muscloaf shotput spritesheet_40
+    21300082: muscloaf shotput spritesheet_41
+    21300084: muscloaf shotput spritesheet_42
+    21300086: muscloaf shotput spritesheet_43
+    21300088: muscloaf shotput spritesheet_44
+    21300090: muscloaf shotput spritesheet_45
+    21300092: muscloaf shotput spritesheet_46
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7948fa2e637ec004cb7c842fbae4ea74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38d7e6cefcf0c54ba7c22f2a2e9b2c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab9e553db5de8d4fbb7b623d1b5c127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53592f31e31c8034ba69830299264fab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1941b3748bf18484c9f1f3557e4502fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db42336c68ce75042ba1d4b8eecfc820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d70bfacb9d162a4a80876c0a2a24b71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5383
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d95543e73da0594f926da15a9b42dc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 6152
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030451ae28d4cab449a86e892e37b845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 6921
+        y: 2436
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa4663a3998c8e489d420aa11981059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28f59b9325f9f442952ed0615eace1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58e600340ed0d348a255f95edb8123d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17791974b74ff9845a47d2251f75e19f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da44467778493d74fa12d3624b61bbae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2aef76e1eb8c6448244beb7c67cc67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f87764267e27648a6b0573e41e4c8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7f439def3a0a644958da05e5181494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 5383
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb6f5ea22651d546b29ed2b6212ab0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 6152
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0e3ba6d09a64e44a7c0cc25bfa02e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 6921
+        y: 1827
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baae7285e3e76d2459632035e61ca442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3e8127fcaaaa14a895fb5ea8623929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94865c943e539154b91f415147a972be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b07859cd151f674c9f7d85fef38e2eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204e66a0d1d3ab6428a75c1da1505664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1127d455defa3b44977c9116fd54a37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abc58b39717cc944b03fd4b0c79342b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19302d29a7270d478fe0f10a7591101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 5383
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c4d12bffbdf6c4cbc2f045174b99cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6152
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc840730eefeead4cb0f0997f2850e07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 6921
+        y: 1218
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0a2c1261347e246a436d01bf6b9b3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9096fc1204677243839939ef1bf0299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8cb38f08323a54093c9e2d508aeee0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b617c8eff64de41894b09537a7838e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ade0b7a9ffd6264f94334a71561c998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a186c46f7e0bda43b329dd9c5612b49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e75a3556b13a5d44b650c0a3766c438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d17eb4682584bf4e8a354f447ab91dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 5383
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27213a34823a204d87f64312dc8c285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 6152
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3001b0cf2fd644e8a0acac25d9dc4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 6921
+        y: 609
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0236668bb72fac49a0492d3490c492f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c75dbfd7a727ef41998141d9c4935ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3724fdf24c5a7a94c95c2929f346d47f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c879c532ba018b4185d39329efef22a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864010a83d306f049afbce5d6dcd44ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5623b5d9a73b06b45ac8ca01367faa88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ec6cdd6fd1bf342b02ee86d870bf36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muscloaf shotput spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 0
+        width: 769
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f249c7bb3fcb6b842a9178b27b76aa92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c092602199b6d214ab5aeb4a82a0ec75
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

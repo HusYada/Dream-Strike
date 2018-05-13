@@ -1,4 +1,4 @@
-﻿// Projectile Script for Dream Strike
+﻿// Projectile Script for Dream Strike by Huseyin Geyik
 
 using System.Collections;
 using System.Collections.Generic;
@@ -26,6 +26,8 @@ public class projectile : MonoBehaviour {
      									 transform.position.z + zdirection * Time.deltaTime); 
     }
 
+    // If the toaster touches the player it's box collider will turn off
+    // If it touches a wall, it will be destroyed
     void OnCollisionEnter2D(Collision2D col) {
 
     	if(col.gameObject.tag == "Plyr") {

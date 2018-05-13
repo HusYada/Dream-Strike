@@ -1,4 +1,4 @@
-// Player Slam Script for Dream Strike
+// Player Slam Script for Dream Strike by Huseyin Geyik
 
 using System.Collections;
 using System.Collections.Generic;
@@ -8,12 +8,13 @@ public class playerslam : MonoBehaviour {
 
 	public player plyr;					// A script variable to access variables from the player script
 	public abtscreen abt;				// A script variable to access variables from the player script
-	public bool canslam = true;		// Checks if the player can slam
+	public bool canslam = true;			// Checks if the player can slam
 	public bool slamming = false;		// Checks if the player is slamming
 	private float slamspeed = 19.5f;	// Slam speed
 	public int slamcurrentframe = 0;	// The number of the frames that's passed for the slam animation
-	public AudioClip slamSFX; //sound clip played when slamming
-	private int slamtime = 42;			// The time it takes to finish the slam
+	public AudioClip slamSFX; 			//Sound clip that plays when the player is slamming
+	private int slamtime = 21;			// The time it takes to finish the slam
+	private int reloadtime = 42;		// The time it takes to reload the slam
 	private Rigidbody2D rb;				// The rigidbody for the player
 	private Animator anim;				// The animator for the player
 
@@ -50,21 +51,45 @@ public class playerslam : MonoBehaviour {
 			anim.SetBool("Falling", true);
 			//plyr.invincible = true;
 
-			if(slamcurrentframe <= slamtime / 2) {
-				transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * slamspeed * Time.deltaTime);
+			if(slamcurrentframe <= slamtime) {
+				if(plyr.soaped == false || plyr.soaped == true && abt.eqpdgoodgrip == true) {
+					transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * slamspeed * Time.deltaTime);
+				}
+
+				if(plyr.soaped == true && plyr.lookingleft && abt.eqpdgoodgrip == false) {
+					rb.AddForce(Vector2.left * (slamspeed / 2));
+				}
+
+				if(plyr.soaped == true && plyr.lookingright && abt.eqpdgoodgrip == false) {
+					rb.AddForce(Vector2.right * (slamspeed / 2));
+				}
+
 				rb.constraints = RigidbodyConstraints2D.FreezePositionY;
 			}
 		}
 
+		// When the slam ends, the player can move again
+		if(slamcurrentframe == (slamtime + 1)) {
+			rb.constraints = ~RigidbodyConstraints2D.FreezePosition;
+			//rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
+			if(plyr.soaped == false || plyr.soaped == true && abt.eqpdgoodgrip == true) { //|| abt.eqpdrollerskates == false) {
+				rb.velocity = new Vector2(0, 0);
+			}
+		}
+
 		// When the counter for the slam is greater than one third of the attack time, the slam animation will finish
-		if(slamcurrentframe > slamtime / 2) {
+		if(slamcurrentframe > slamtime) {
 			anim.SetBool("Slamming", false);
+			//rb.constraints = ~RigidbodyConstraints2D.FreezePositionX;
+			//rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
 			slamming = false;
 			//plyr.invincible = true;
-			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
 
+			// Anim changes if in the air or ground
 			if(plyr.grounded == true){
-				anim.SetFloat("Horizontal", 0);
+				if(abt.eqpdrollerskates == false) {
+					anim.SetFloat("Horizontal", 0);
+				}
 				anim.SetBool("Falling", false);
 			} else {
 				anim.SetBool("Falling", true);
@@ -72,7 +97,7 @@ public class playerslam : MonoBehaviour {
 		}
 
 		// When the counter for the slam is greater than the slam time, the slam will finish and slamcurrentframe is reset
-		if(slamcurrentframe > slamtime) {
+		if(slamcurrentframe > reloadtime) {
 			slamcurrentframe = 0;
 			canslam = true;
 			//plyr.invincible = false;
@@ -94,19 +119,21 @@ public class playerslam : MonoBehaviour {
 			rb.constraints = ~RigidbodyConstraints2D.FreezePositionY;
 			//transform.Translate (new Vector3 (0.0f, 0.0f, 0.0f) * Time.deltaTime);
 
-			if(slamcurrentframe <= slamtime / 2) {
-				slamcurrentframe = (slamtime / 2) + 1;
+			if(slamcurrentframe <= slamtime) {
+				slamcurrentframe = slamtime + 1;
 			}
 		}
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 	}
 
@@ -126,44 +153,50 @@ public class playerslam : MonoBehaviour {
 			//transform.Translate (new Vector3 (0.0f, 0.0f, 0.0f) * Time.deltaTime);
 
 			if(slamcurrentframe <= slamtime / 2) {
-				slamcurrentframe = (slamtime / 2) + 1;
+				slamcurrentframe = slamtime + 1;
 			}
 		}
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 	}
 
 	void OnCollisionStay2D (Collision2D col) {
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 	}
 
 	void OnTriggerStay2D (Collider2D col) {
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Lwl" && this.transform.eulerAngles == plyr.leftvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 
+		// When slamming into a wall, the slam ends
 		if(col.gameObject.tag == "Rwl" && this.transform.eulerAngles == plyr.rightvector) {
 			canslam = false;
-			slamcurrentframe = (slamtime / 2) + 1;
+			slamcurrentframe = slamtime + 1;
 		}
 	}
 }

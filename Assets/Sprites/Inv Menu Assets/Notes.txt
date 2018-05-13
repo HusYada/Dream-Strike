@@ -1,0 +1,33 @@
+Notes:
+
+-Preview images has been provided for the different menus so you can 
+position everything correctly. Place it into the game with low
+opacity as a guide if you need to
+
+-As stated in the previous menu notes files, these assets need to be 
+placed in the part 2 assets of the menu (basically after the MenuZOOM
+anim has finished). The menu assets need to be placed in between
+MenuTop and MenuBottom. MenuTop needs to be on top!
+(if this is too confusing just ask me, but you can figure it out its
+not hard duh)
+
+- Only Ability and Inv menus have been provided. The Status and Options menu
+will have to wait since its not a priority for the uni build
+
+- The DP bar is a temporary static image so far since we haven't
+decided how it'll work
+
+-The Inv menu has no sprites for items/equips since we haven't decided
+what we'll have in the uni build
+
+
+
+---					----				---
+
+Notes for me (incase I forget in the future): 
+
+- The selection expansion for the inv and ability icon blocks is 25 pix with
+curve expansion. Just select the inside of the lineart for the menu icons.
+(just the block, not the image/number overlaying it)
+
+---					----				---

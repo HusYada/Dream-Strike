@@ -1,4 +1,4 @@
-// Player Movement Script for Dream Strike
+// Player Movement Script for Dream Strike by Huseyin Geyik
 
 using System.Collections;
 using System.Collections.Generic;
@@ -6,18 +6,18 @@ using UnityEngine;
 
 public class playermovement : MonoBehaviour {
 
-	public player plyr;					// A script variable to access variables from the player script
-	public abtscreen abt;				// A script variable to access variables from the abtscreen script
-	public playerslam slm;				// A script variable to access variables from the playerslam script
-	public bool canwalkleft = true;		// Checks if the player can walk left
-	public bool canwalkright = true;	// Checks if the player can walk right
-	private bool start_move_cooldownleft = false;
-	private bool start_move_cooldownright = false;
-	private int move_cooldowntime = 2; 							// The cooldown on the player's invincibility when hurt
-    private int moveleft_cooldowncounter = 0; 				// The counter for the invincibility cooldown
-    private int moveright_cooldowncounter = 0;
-	private Rigidbody2D rb;
-	private Animator anim;				// The animator for the player
+	public player plyr;										// A script variable to access variables from the player script
+	public abtscreen abt;									// A script variable to access variables from the abtscreen script
+	public playerslam slm;									// A script variable to access variables from the playerslam script
+	public bool canwalkleft = true;							// Checks if the player can walk left
+	public bool canwalkright = true;						// Checks if the player can walk right
+	private bool start_move_cooldownleft = false;			// Checks if the player's walk left is cooling down
+	private bool start_move_cooldownright = false;			// Checks if the player's walk right is cooling down
+	private int move_cooldowntime = 2; 						// The cooldown on the player's invincibility when hurt
+    private int moveleft_cooldowncounter = 0; 				// The counter for the walk left cooldown
+    private int moveright_cooldowncounter = 0;				// The counter for the walk right cooldown
+	private Rigidbody2D rb;									// The rigidbody for the player
+	private Animator anim;									// The animator for the player
 
 	void Start () {
 
@@ -36,66 +36,91 @@ public class playermovement : MonoBehaviour {
 		//rb.MovePosition(transform.position + posx);
 
 		// If left is pressed/control stick is pushed left, the player will move left
-		if ((Input.GetKey("left") || hmove < -0.1f)) {
+		if ((Input.GetKey("left") || hmove < -0.1f) || abt.eqpdrollerskates == true && this.transform.eulerAngles == plyr.leftvector) {
 
 			//rb.AddForce(Vector2.left * speed);
 			//rb.MovePosition(transform.position + transform.right * -speed * Time.deltaTime);
 
 			// If the "Walk Left" ability is equipped, then the player can perform the action
-			if(plyr.locked == false && abt.eqpdwalkleft == true && canwalkleft == true && ((plyr.invincible_cooldowncounter > plyr.invincible_cooldowntime / 4 && plyr.invincible == true) || plyr.invincible == false) && slm.slamming == false) {
+			if(plyr.locked == false && (abt.eqpdwalkleft == true || abt.eqpdrollerskates == true) && canwalkleft == true && ((plyr.invincible_cooldowncounter > plyr.invincible_cooldowntime / 4 && plyr.invincible == true) || plyr.invincible == false) && slm.slamming == false) {
+				
+				// If the player is soaped, the movement will be more slippery using rigidbody physics
+				if(plyr.soaped == false || plyr.soaped == true && abt.eqpdgoodgrip == true) {
 				transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * plyr.speed * Time.deltaTime);
+				}
+
+				// If the player is not soaped, the movement will be normal
+				if(plyr.soaped == true && abt.eqpdgoodgrip == false) {
+					rb.AddForce(Vector2.left * plyr.speed);
+				}
 				//rb.velocity = new Vector2(-6, rb.velocity.y);
 				plyr.idle = false;
 
+				// If the player is on the ground, the moving left animation will play
 				if (plyr.grounded == true) {
 					anim.SetFloat("Horizontal", -1);
 				}
 
-				if(Input.GetKey("z") && plyr.grounded == true) {
+				/*if(Input.GetKey("z") && plyr.grounded == true && plyr.soaped == false) {
 					rb.velocity = new Vector2(0,0);
-				}
+				}*/
 			}
 
 			// Using the left vector to rotate the player to the left direction
-			if(plyr.locked == false && plyr.gravityflip == false) {
+			/*if(plyr.locked == false && plyr.gravityflip == false) {
 				transform.eulerAngles = plyr.leftvector;
+				plyr.lookingleft = true;
+				plyr.lookingright = false;
 			}
 
 			if(plyr.locked == false && plyr.gravityflip == true) {
 				transform.eulerAngles = plyr.grightvector;
-			}
+			}*/
 
 		// Or if right is pressed/control stick is pushed right, the player will move right
-		} else if ((Input.GetKey("right") || hmove > 0.1f)) {
+		} else if ((Input.GetKey("right") || hmove > 0.1f) || abt.eqpdrollerskates == true && this.transform.eulerAngles == plyr.rightvector) {
 
 			//rb.AddForce(Vector2.right * speed);
 			//rb.MovePosition(transform.position + transform.right * speed * Time.deltaTime);
 
 			// If the "Walk Right" ability is equipped, then the player can perform the action
-			if(plyr.locked == false && abt.eqpdwalkright == true && canwalkright == true && ((plyr.invincible_cooldowncounter > plyr.invincible_cooldowntime / 4 && plyr.invincible == true) || plyr.invincible == false) && slm.slamming == false) {
-				transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * plyr.speed * Time.deltaTime);
+			if(plyr.locked == false && (abt.eqpdwalkright == true || abt.eqpdrollerskates == true) && canwalkright == true && ((plyr.invincible_cooldowncounter > plyr.invincible_cooldowntime / 4 && plyr.invincible == true) || plyr.invincible == false) && slm.slamming == false) {
+				
+				// If the player is soaped, the movement will be more slippery using rigidbody physics
+				if(plyr.soaped == false || plyr.soaped == true && abt.eqpdgoodgrip == true) {
+					transform.Translate (new Vector3 (0.5f, 0.0f, 0.0f) * plyr.speed * Time.deltaTime);
+				}
+
+				// If the player is not soaped, the movement will be normal
+				if(plyr.soaped == true && abt.eqpdgoodgrip == false) {
+					rb.AddForce(Vector2.right * plyr.speed);
+				}
 				//rb.velocity = new Vector2(6, rb.velocity.y);
 				plyr.idle = false;
 
+				// If the player is on the ground, the moving right animation will play
 				if (plyr.grounded == true){
 					anim.SetFloat("Horizontal", 1);
 				}
 			}
 
 			// Using the right vector to rotate the player to the right direction
-			if(plyr.locked == false && plyr.gravityflip == false) {
+			/*if(plyr.locked == false && plyr.gravityflip == false) {
 				transform.eulerAngles = plyr.rightvector;
+				plyr.lookingleft = false;
+				plyr.lookingright = true;
 			}
 
 			if(plyr.locked == false && plyr.gravityflip == true) {
 				transform.eulerAngles = plyr.grightvector;
-			}
+			}*/
 
 			// If the player is not moving left or right, then the player is idle
 		} else { 
 			plyr.idle = true;
 		}
 
+		// Cooldowns
 		if(start_move_cooldownleft == true) {
 			moveleft_cooldowncounter++;
 		}
@@ -122,7 +147,7 @@ public class playermovement : MonoBehaviour {
 		}*/
 	}
 
-	// If the player is collides with something on the left of it, it cannot move left, vice versa for moving right
+	// If the player is colliding with something on the left of it, it cannot move left, vice versa for moving right
 	void OnCollisionEnter2D(Collision2D col) {
 		if(col.gameObject.tag == "Lwl") {
 			canwalkleft = false;
