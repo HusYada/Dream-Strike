@@ -41,7 +41,7 @@ public class playershoot : MonoBehaviour {
  			float destroyprojectile = 2.5f;
 
 			// If v/Y button is pressed and the player is facing right and the player isn't already shooting, then the player will shoot a projectile to the right
-			if(plyr.locked == false && xboxp1_y == true && this.transform.eulerAngles == plyr.rightvector && shooting == false
+			if(plyr.locked == false && (Input.GetKeyDown("v") || xboxp1_y == true) && this.transform.eulerAngles == plyr.rightvector && shooting == false
 				|| plyr.locked == false && Input.GetKeyDown("v") && plyr.lookingright == true && shooting == false) {
 
 				shooting = true;
@@ -56,7 +56,7 @@ public class playershoot : MonoBehaviour {
  				//Destroy(rbullet.gameObject, destroyprojectile);
 
  			// If v/Y button is pressed and the player is facing left and the player isn't already shooting, then the player will shoot a projectile to the left
-			} else if (plyr.locked == false && xboxp1_y == true && this.transform.eulerAngles == plyr.leftvector && shooting == false
+			} else if (plyr.locked == false && (Input.GetKeyDown("v") || xboxp1_y == true) && this.transform.eulerAngles == plyr.leftvector && shooting == false
 				|| plyr.locked == false && Input.GetKeyDown("v") && plyr.lookingleft == true && shooting == false) {
 
 				shooting = true;

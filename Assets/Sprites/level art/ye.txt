@@ -1,0 +1,30 @@
+ye some quick notes.
+
+-The area above the first bonus portal (theres a muscloaf there and the art has vines wrapping around
+a long platform). The hazards there used to be too big which made it hard to go through. When I drew
+the art I made it so that the hazard blocks can be smaller so. Yh make them smaller. Fit it to da art.
+
+-something weird about those baguettes. They are too big, dont move as far as they used to, and are a tad
+bit too fast. Almost impossible to time.
+
+-Rolls... Really don't work lmao, thank you for puttin them in tho ;D
+
+--- Remember to set the level art to Compression: None, Size: 8192. Before I told you to set filter to "point(no)".
+Well actually turns that that's why our art was jaggy. Leave it as "bilinnear". Make sure all big art including
+the sky backgrounds are set like this.
+
+-Level music doesnt seem to loop. Hmmmm!
+
+-dat menu OH MA GAWD.
+
+-Game plays well, everything is well expect for some slightly small level design issues and bugs we
+already know about. Yip yop.
+
+-No backgrounds because I'm a gangsta
+
+----      -------          ---------      ------   ---------    ---- ----- ----- -----
+
+This will be all the art you see from me till the 21st (my deadline). I can do small lil things if you need me to
+in the meantime, but really I need to finish ma comic. Good work man, can't believe we have a decent 2002 newgrounds
+flashgame in 3 months!
+
