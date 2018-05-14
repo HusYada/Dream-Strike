@@ -32,6 +32,7 @@ Exit Text Prompt | Enter / Return Key or Z key | Start Button or A button
 
 ## Notes
 * When opening the executable you will be presented with a setup window before opening the game; the optimal way to play the game is to set the screen resolution to 1280x720 and the graphics quality to "Fantastic", anything else may cause positioning problems for the UI or make the game too fast
+* It may take up to two minutes or more to load the level from the title screen due to its sheer size, unfortantly I was unable to put in a loading bar so please do not exit the program, it just takes a long time to open the level
 * To check what abilities you have, open the menu and look at the icon, a darkened icon means that the ability is not equipped where as bold icons are equipped
 * On the upper right corner of the menu there are two numbers seperated by a /, the left number indicates how many dream points (DP) you are currently using, the right number shows how many you can use; this is important because equipping abilities will cost DP
 * If the player gets stuck and they cannot move left or right while their respective abilites are equipped, either Cyber Slam into any nearby wall or use Mayonaise to move freely again. If you don't have either of those abilities you may need to restart the game
